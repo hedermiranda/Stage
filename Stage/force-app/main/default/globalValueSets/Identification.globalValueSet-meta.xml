@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Participante</fullName>
+        <default>false</default>
+        <label>Participante</label>
+    </customValue>
+    <customValue>
+        <fullName>Fornecedor</fullName>
+        <default>false</default>
+        <label>Fornecedor</label>
+    </customValue>
+    <customValue>
+        <fullName>Entidade Representativa</fullName>
+        <default>false</default>
+        <label>Entidade Representativa</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros Públicos</fullName>
+        <default>false</default>
+        <label>Outros Públicos</label>
+    </customValue>
+    <customValue>
+        <fullName>Funcionário Previ</fullName>
+        <default>false</default>
+        <label>Funcionário Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>0125C0000015WpsQAE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>0125C0000015WpsQAE</label>
+    </customValue>
+    <description>Campo utilizado para classificar o Tipo de Contato</description>
+    <masterLabel>Identificação</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

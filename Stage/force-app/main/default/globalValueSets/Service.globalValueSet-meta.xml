@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>2ª via</fullName>
+        <default>false</default>
+        <label>2ª via</label>
+    </customValue>
+    <customValue>
+        <fullName>Acesso/Navegação</fullName>
+        <default>false</default>
+        <label>Acesso/Navegação</label>
+    </customValue>
+    <customValue>
+        <fullName>Ascensão Profissional</fullName>
+        <default>false</default>
+        <label>Ascensão Profissional</label>
+    </customValue>
+    <customValue>
+        <fullName>Assédio Moral</fullName>
+        <default>false</default>
+        <label>Assédio Moral</label>
+    </customValue>
+    <customValue>
+        <fullName>Assédio Sexual</fullName>
+        <default>false</default>
+        <label>Assédio Sexual</label>
+    </customValue>
+    <customValue>
+        <fullName>Benefícios</fullName>
+        <default>false</default>
+        <label>Benefícios</label>
+    </customValue>
+    <customValue>
+        <fullName>Bolsa de Estudo</fullName>
+        <default>false</default>
+        <label>Bolsa de Estudo</label>
+    </customValue>
+    <customValue>
+        <fullName>Cadastro</fullName>
+        <default>false</default>
+        <label>Cadastro</label>
+    </customValue>
+    <customValue>
+        <fullName>Canais/Senha</fullName>
+        <default>false</default>
+        <label>Canais/Senha</label>
+    </customValue>
+    <customValue>
+        <fullName>Clima organizacional</fullName>
+        <default>false</default>
+        <label>Clima organizacional</label>
+    </customValue>
+    <customValue>
+        <fullName>Clima organizacional - Q/C</fullName>
+        <default>false</default>
+        <label>Clima organizacional - Q/C</label>
+    </customValue>
+    <customValue>
+        <fullName>Clube de Benefícios</fullName>
+        <default>false</default>
+        <label>Clube de Benefícios</label>
+    </customValue>
+    <customValue>
+        <fullName>Comunicação</fullName>
+        <default>false</default>
+        <label>Comunicação</label>
+    </customValue>
+    <customValue>
+        <fullName>Concessão</fullName>
+        <default>false</default>
+        <label>Concessão</label>
+    </customValue>
+    <customValue>
+        <fullName>Concessão Pensão</fullName>
+        <default>false</default>
+        <label>Concessão Pensão</label>
+    </customValue>
+    <customValue>
+        <fullName>Contestação das Cláusulas Contratuais</fullName>
+        <default>false</default>
+        <label>Contestação das Cláusulas Contratuais</label>
+    </customValue>
+    <customValue>
+        <fullName>Contribuições</fullName>
+        <default>false</default>
+        <label>Contribuições</label>
+    </customValue>
+    <customValue>
+        <fullName>Cultura</fullName>
+        <default>false</default>
+        <label>Cultura</label>
+    </customValue>
+    <customValue>
+        <fullName>Dados</fullName>
+        <default>false</default>
+        <label>Dados</label>
+    </customValue>
+    <customValue>
+        <fullName>Definição/Prévia opção/Saldo</fullName>
+        <default>false</default>
+        <label>Definição/Prévia opção/Saldo</label>
+    </customValue>
+    <customValue>
+        <fullName>Demonstrativo IR</fullName>
+        <default>false</default>
+        <label>Demonstrativo IR</label>
+    </customValue>
+    <customValue>
+        <fullName>Dificuldade na Comunicação/ Relacionamento</fullName>
+        <default>false</default>
+        <label>Dificuldade na Comunicação/ Relacionamento</label>
+    </customValue>
+    <customValue>
+        <fullName>Documentos Microfilmados</fullName>
+        <default>false</default>
+        <label>Documentos Microfilmados</label>
+    </customValue>
+    <customValue>
+        <fullName>Espelho</fullName>
+        <default>false</default>
+        <label>Espelho</label>
+    </customValue>
+    <customValue>
+        <fullName>Etário</fullName>
+        <default>false</default>
+        <label>Etário</label>
+    </customValue>
+    <customValue>
+        <fullName>Favorecimento de Fornecedores</fullName>
+        <default>false</default>
+        <label>Favorecimento de Fornecedores</label>
+    </customValue>
+    <customValue>
+        <fullName>Favorecimento em Processos de Seleção</fullName>
+        <default>false</default>
+        <label>Favorecimento em Processos de Seleção</label>
+    </customValue>
+    <customValue>
+        <fullName>Folha de Pagamento</fullName>
+        <default>false</default>
+        <label>Folha de Pagamento</label>
+    </customValue>
+    <customValue>
+        <fullName>Fopag</fullName>
+        <default>false</default>
+        <label>Fopag</label>
+    </customValue>
+    <customValue>
+        <fullName>Fraude financeira</fullName>
+        <default>false</default>
+        <label>Fraude financeira</label>
+    </customValue>
+    <customValue>
+        <fullName>Fraude operacional</fullName>
+        <default>false</default>
+        <label>Fraude operacional</label>
+    </customValue>
+    <customValue>
+        <fullName>Gênero</fullName>
+        <default>false</default>
+        <label>Gênero</label>
+    </customValue>
+    <customValue>
+        <fullName>Gestão</fullName>
+        <default>false</default>
+        <label>Gestão</label>
+    </customValue>
+    <customValue>
+        <fullName>Imposto de Renda</fullName>
+        <default>false</default>
+        <label>Imposto de Renda</label>
+    </customValue>
+    <customValue>
+        <fullName>Informações/Serviços CAPEC</fullName>
+        <default>false</default>
+        <label>Informações/Serviços CAPEC</label>
+    </customValue>
+    <customValue>
+        <fullName>Informações/Serviços ES</fullName>
+        <default>false</default>
+        <label>Informações/Serviços ES</label>
+    </customValue>
+    <customValue>
+        <fullName>Informações/Serviços FI</fullName>
+        <default>false</default>
+        <label>Informações/Serviços FI</label>
+    </customValue>
+    <customValue>
+        <fullName>Institucional</fullName>
+        <default>false</default>
+        <label>Institucional</label>
+    </customValue>
+    <customValue>
+        <fullName>Institutos</fullName>
+        <default>false</default>
+        <label>Institutos</label>
+    </customValue>
+    <customValue>
+        <fullName>Investimentos e Participações</fullName>
+        <default>false</default>
+        <label>Investimentos e Participações</label>
+    </customValue>
+    <customValue>
+        <fullName>LGPD</fullName>
+        <default>false</default>
+        <label>LGPD</label>
+    </customValue>
+    <customValue>
+        <fullName>Manutenção</fullName>
+        <default>false</default>
+        <label>Manutenção</label>
+    </customValue>
+    <customValue>
+        <fullName>Manutenção Pensão</fullName>
+        <default>false</default>
+        <label>Manutenção Pensão</label>
+    </customValue>
+    <customValue>
+        <fullName>Movimento de Lateralidade</fullName>
+        <default>false</default>
+        <label>Movimento de Lateralidade</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Notícias e Publicações</fullName>
+        <default>false</default>
+        <label>Notícias e Publicações</label>
+    </customValue>
+    <customValue>
+        <fullName>Obtenção de vantagens indevidas</fullName>
+        <default>false</default>
+        <label>Obtenção de vantagens indevidas</label>
+    </customValue>
+    <customValue>
+        <fullName>Orientação sexual</fullName>
+        <default>false</default>
+        <label>Orientação sexual</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros</fullName>
+        <default>false</default>
+        <label>Outros</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros F/P</fullName>
+        <default>false</default>
+        <label>Outros F/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros O</fullName>
+        <default>false</default>
+        <label>Outros O</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros P/F</fullName>
+        <default>false</default>
+        <label>Outros P/F</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros R/C</fullName>
+        <default>false</default>
+        <label>Outros R/C</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros S</fullName>
+        <default>false</default>
+        <label>Outros S</label>
+    </customValue>
+    <customValue>
+        <fullName>Pagamento</fullName>
+        <default>false</default>
+        <label>Pagamento</label>
+    </customValue>
+    <customValue>
+        <fullName>Pagamentos ou Recebimentos Impróprios</fullName>
+        <default>false</default>
+        <label>Pagamentos ou Recebimentos Impróprios</label>
+    </customValue>
+    <customValue>
+        <fullName>Pensão Alimentícia</fullName>
+        <default>false</default>
+        <label>Pensão Alimentícia</label>
+    </customValue>
+    <customValue>
+        <fullName>Portabilidade</fullName>
+        <default>false</default>
+        <label>Portabilidade</label>
+    </customValue>
+    <customValue>
+        <fullName>Preservação Nível de Contribuição</fullName>
+        <default>false</default>
+        <label>Preservação Nível de Contribuição</label>
+    </customValue>
+    <customValue>
+        <fullName>Processo de Seleção</fullName>
+        <default>false</default>
+        <label>Processo de Seleção</label>
+    </customValue>
+    <customValue>
+        <fullName>Protocolo</fullName>
+        <default>false</default>
+        <label>Protocolo</label>
+    </customValue>
+    <customValue>
+        <fullName>Qualidade do Atendimento de 1ª instância</fullName>
+        <default>false</default>
+        <label>Qualidade do Atendimento de 1ª instância</label>
+    </customValue>
+    <customValue>
+        <fullName>Quebra de Dados/Informações Confidenciais</fullName>
+        <default>false</default>
+        <label>Quebra de Dados/Informações Confidenciais</label>
+    </customValue>
+    <customValue>
+        <fullName>Quebra de Dados/Informações Interna</fullName>
+        <default>false</default>
+        <label>Quebra de Dados/Informações Interna</label>
+    </customValue>
+    <customValue>
+        <fullName>Questões Comportamentais</fullName>
+        <default>false</default>
+        <label>Questões Comportamentais</label>
+    </customValue>
+    <customValue>
+        <fullName>Racial</fullName>
+        <default>false</default>
+        <label>Racial</label>
+    </customValue>
+    <customValue>
+        <fullName>Reclamatória Trabalhista</fullName>
+        <default>false</default>
+        <label>Reclamatória Trabalhista</label>
+    </customValue>
+    <customValue>
+        <fullName>Relacionamento Interpessoal</fullName>
+        <default>false</default>
+        <label>Relacionamento Interpessoal</label>
+    </customValue>
+    <customValue>
+        <fullName>Relacionamentos</fullName>
+        <default>false</default>
+        <label>Relacionamentos</label>
+    </customValue>
+    <customValue>
+        <fullName>Resgate solicitado/pago</fullName>
+        <default>false</default>
+        <label>Resgate solicitado/pago</label>
+    </customValue>
+    <customValue>
+        <fullName>Roubo ou Furto de Insumos e Equipamentos</fullName>
+        <default>false</default>
+        <label>Roubo ou Furto de Insumos e Equipamentos</label>
+    </customValue>
+    <customValue>
+        <fullName>Solicitação</fullName>
+        <default>false</default>
+        <label>Solicitação</label>
+    </customValue>
+    <customValue>
+        <fullName>Treinamento</fullName>
+        <default>false</default>
+        <label>Treinamento</label>
+    </customValue>
+    <customValue>
+        <fullName>Utilização da Marca Previ</fullName>
+        <default>false</default>
+        <label>Utilização da Marca Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>Utilização de Bens e Recursos</fullName>
+        <default>false</default>
+        <label>Utilização de Bens e Recursos</label>
+    </customValue>
+    <customValue>
+        <fullName>Utilização de Informações Privilegiadas</fullName>
+        <default>false</default>
+        <label>Utilização de Informações Privilegiadas</label>
+    </customValue>
+    <customValue>
+        <fullName>Vale Refeição/Alimentação</fullName>
+        <default>false</default>
+        <label>Vale Refeição/Alimentação</label>
+    </customValue>
+    <customValue>
+        <fullName>Vale Transporte</fullName>
+        <default>false</default>
+        <label>Vale Transporte</label>
+    </customValue>
+    <customValue>
+        <fullName>Vinculação ao Plano</fullName>
+        <default>false</default>
+        <label>Vinculação ao Plano</label>
+    </customValue>
+    <customValue>
+        <fullName>Vinculação ao Plano - P/F</fullName>
+        <default>false</default>
+        <label>Vinculação ao Plano - P/F</label>
+    </customValue>
+    <customValue>
+        <fullName>Violação de Leis</fullName>
+        <default>false</default>
+        <label>Violação de Leis</label>
+    </customValue>
+    <customValue>
+        <fullName>Violação de Políticas internas</fullName>
+        <default>false</default>
+        <label>Violação de Políticas internas</label>
+    </customValue>
+    <customValue>
+        <fullName>Violação de Regulamentos</fullName>
+        <default>false</default>
+        <label>Violação de Regulamentos</label>
+    </customValue>
+    <customValue>
+        <fullName>Informações/Serviços</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Informações/Serviços</label>
+    </customValue>
+    <description>Campo para informar o Serviço</description>
+    <masterLabel>Serviço</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cadastro</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cadastros</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Attendees</layout>
+        <sections>
+            <label></label>
+            <section>Informações Bancárias</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações de Contato</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações de Correspondências</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PersonaAccountLayout</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Dados Pessoais</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dados Previ e Patrocinador</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dependentes Previ</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Documentos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações Bancárias</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações de Contato</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações de Correspondências</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações de Endereço</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Representante Legal</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>UpdateAccount</name>
+    </quickActions>
+</CustomObjectTranslation>

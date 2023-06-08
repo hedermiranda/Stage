@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>13º salário</fullName>
+        <default>false</default>
+        <label>13º salário</label>
+    </customValue>
+    <customValue>
+        <fullName>13º salário -M/P</fullName>
+        <default>false</default>
+        <label>13º salário -M/P</label>
+    </customValue>
+    <customValue>
+        <fullName>13º salário - P/A</fullName>
+        <default>false</default>
+        <label>13º salário - P/A</label>
+    </customValue>
+    <customValue>
+        <fullName>2ª via</fullName>
+        <default>false</default>
+        <label>2ª via</label>
+    </customValue>
+    <customValue>
+        <fullName>Agência/Conta</fullName>
+        <default>false</default>
+        <label>Agência/Conta</label>
+    </customValue>
+    <customValue>
+        <fullName>Agência/Conta Corrente</fullName>
+        <default>false</default>
+        <label>Agência/Conta Corrente</label>
+    </customValue>
+    <customValue>
+        <fullName>Agendamento Assessoria</fullName>
+        <default>false</default>
+        <label>Agendamento Assessoria</label>
+    </customValue>
+    <customValue>
+        <fullName>Altera Cadastro</fullName>
+        <default>false</default>
+        <label>Altera Cadastro</label>
+    </customValue>
+    <customValue>
+        <fullName>Aplicativo</fullName>
+        <default>false</default>
+        <label>Aplicativo</label>
+    </customValue>
+    <customValue>
+        <fullName>Aplicativo - A/N</fullName>
+        <default>false</default>
+        <label>Aplicativo - A/N</label>
+    </customValue>
+    <customValue>
+        <fullName>Aplicativo - N/P</fullName>
+        <default>false</default>
+        <label>Aplicativo - N/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Assessoria - Esclarecimentos</fullName>
+        <default>false</default>
+        <label>Assessoria - Esclarecimentos</label>
+    </customValue>
+    <customValue>
+        <fullName>Atendimento</fullName>
+        <default>false</default>
+        <label>Atendimento</label>
+    </customValue>
+    <customValue>
+        <fullName>Atendimento descortês</fullName>
+        <default>false</default>
+        <label>Atendimento descortês</label>
+    </customValue>
+    <customValue>
+        <fullName>Autoadesão</fullName>
+        <default>false</default>
+        <label>Autoadesão</label>
+    </customValue>
+    <customValue>
+        <fullName>Autoatendimento</fullName>
+        <default>false</default>
+        <label>Autoatendimento</label>
+    </customValue>
+    <customValue>
+        <fullName>Autoatendimento - A/N</fullName>
+        <default>false</default>
+        <label>Autoatendimento - A/N</label>
+    </customValue>
+    <customValue>
+        <fullName>Autoatendimento - P</fullName>
+        <default>false</default>
+        <label>Autoatendimento - P</label>
+    </customValue>
+    <customValue>
+        <fullName>Autorização p/cadastrar URA</fullName>
+        <default>false</default>
+        <label>Autorização p/cadastrar URA</label>
+    </customValue>
+    <customValue>
+        <fullName>Baixa de Hipoteca</fullName>
+        <default>false</default>
+        <label>Baixa de Hipoteca</label>
+    </customValue>
+    <customValue>
+        <fullName>Beneficiários</fullName>
+        <default>false</default>
+        <label>Beneficiários</label>
+    </customValue>
+    <customValue>
+        <fullName>Beneficiários C/PV</fullName>
+        <default>false</default>
+        <label>Beneficiários C/PV</label>
+    </customValue>
+    <customValue>
+        <fullName>Benefício Temporário</fullName>
+        <default>false</default>
+        <label>Benefício Temporário</label>
+    </customValue>
+    <customValue>
+        <fullName>Boleto</fullName>
+        <default>false</default>
+        <label>Boleto</label>
+    </customValue>
+    <customValue>
+        <fullName>Cálculo</fullName>
+        <default>false</default>
+        <label>Cálculo</label>
+    </customValue>
+    <customValue>
+        <fullName>Cálculo - I/R</fullName>
+        <default>false</default>
+        <label>Cálculo - I/R</label>
+    </customValue>
+    <customValue>
+        <fullName>Cálculo P-A</fullName>
+        <default>false</default>
+        <label>Cálculo P-A</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancelamento</fullName>
+        <default>false</default>
+        <label>Cancelamento</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancelamento - I/S CAPEC</fullName>
+        <default>false</default>
+        <label>Cancelamento - I/S CAPEC</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancelamento -  I/S ES</fullName>
+        <default>false</default>
+        <label>Cancelamento -  I/S ES</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancelamento - P/N/C</fullName>
+        <default>false</default>
+        <label>Cancelamento - P/N/C</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancelamento -  V/P</fullName>
+        <default>false</default>
+        <label>Cancelamento -  V/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Cartão Alelo</fullName>
+        <default>false</default>
+        <label>Cartão Alelo</label>
+    </customValue>
+    <customValue>
+        <fullName>Central de Vendas</fullName>
+        <default>false</default>
+        <label>Central de Vendas</label>
+    </customValue>
+    <customValue>
+        <fullName>Clima organizacional - Q/C</fullName>
+        <default>false</default>
+        <label>Clima organizacional - Q/C</label>
+    </customValue>
+    <customValue>
+        <fullName>Comunicação de óbito</fullName>
+        <default>false</default>
+        <label>Comunicação de óbito</label>
+    </customValue>
+    <customValue>
+        <fullName>Comunicação de óbito - M/P</fullName>
+        <default>false</default>
+        <label>Comunicação de óbito - M/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Concessão</fullName>
+        <default>false</default>
+        <label>Concessão</label>
+    </customValue>
+    <customValue>
+        <fullName>Concessão/Renovação</fullName>
+        <default>false</default>
+        <label>Concessão/Renovação</label>
+    </customValue>
+    <customValue>
+        <fullName>Condições e cálculo 1</fullName>
+        <default>false</default>
+        <label>Condições e cálculo 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Condições e cálculo 1 -C/P</fullName>
+        <default>false</default>
+        <label>Condições e cálculo 1 -C/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Condições e cálculo 2</fullName>
+        <default>false</default>
+        <label>Condições e cálculo 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Condições e cálculo 2 -C/P</fullName>
+        <default>false</default>
+        <label>Condições e cálculo 2 -C/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Condições e Pagamento</fullName>
+        <default>false</default>
+        <label>Condições e Pagamento</label>
+    </customValue>
+    <customValue>
+        <fullName>Confirma crédito</fullName>
+        <default>false</default>
+        <label>Confirma crédito</label>
+    </customValue>
+    <customValue>
+        <fullName>Consignação de Entidades</fullName>
+        <default>false</default>
+        <label>Consignação de Entidades</label>
+    </customValue>
+    <customValue>
+        <fullName>Contrato</fullName>
+        <default>false</default>
+        <label>Contrato</label>
+    </customValue>
+    <customValue>
+        <fullName>Contrato - I/S ES</fullName>
+        <default>false</default>
+        <label>Contrato - I/S ES</label>
+    </customValue>
+    <customValue>
+        <fullName>Contrato - I/S FI</fullName>
+        <default>false</default>
+        <label>Contrato - I/S FI</label>
+    </customValue>
+    <customValue>
+        <fullName>Contribuições</fullName>
+        <default>false</default>
+        <label>Contribuições</label>
+    </customValue>
+    <customValue>
+        <fullName>Convênio INSS - Exclusão</fullName>
+        <default>false</default>
+        <label>Convênio INSS - Exclusão</label>
+    </customValue>
+    <customValue>
+        <fullName>Convênio INSS - Exclusão - M/P</fullName>
+        <default>false</default>
+        <label>Convênio INSS - Exclusão - M/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Convênio INSS - Inclusão</fullName>
+        <default>false</default>
+        <label>Convênio INSS - Inclusão</label>
+    </customValue>
+    <customValue>
+        <fullName>Convênio INSS - Inclusão - M/P</fullName>
+        <default>false</default>
+        <label>Convênio INSS - Inclusão - M/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Convênio INSS - Outros</fullName>
+        <default>false</default>
+        <label>Convênio INSS - Outros</label>
+    </customValue>
+    <customValue>
+        <fullName>Convênio INSS - Outros -M/P</fullName>
+        <default>false</default>
+        <label>Convênio INSS - Outros -M/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Crédito</fullName>
+        <default>false</default>
+        <label>Crédito</label>
+    </customValue>
+    <customValue>
+        <fullName>Dados Previ/BB/Outros</fullName>
+        <default>false</default>
+        <label>Dados Previ/BB/Outros</label>
+    </customValue>
+    <customValue>
+        <fullName>Débito/crédito conta corrente</fullName>
+        <default>false</default>
+        <label>Débito/crédito conta corrente</label>
+    </customValue>
+    <customValue>
+        <fullName>Declaração</fullName>
+        <default>false</default>
+        <label>Declaração</label>
+    </customValue>
+    <customValue>
+        <fullName>Declaração - M/P</fullName>
+        <default>false</default>
+        <label>Declaração - M/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Demonstrativo IR</fullName>
+        <default>false</default>
+        <label>Demonstrativo IR</label>
+    </customValue>
+    <customValue>
+        <fullName>Demonstrativo IR - I/S</fullName>
+        <default>false</default>
+        <label>Demonstrativo IR - I/S</label>
+    </customValue>
+    <customValue>
+        <fullName>Demonstrativo IR - I/S ES</fullName>
+        <default>false</default>
+        <label>Demonstrativo IR - I/S ES</label>
+    </customValue>
+    <customValue>
+        <fullName>Demonstrativo IR -  I/S FI</fullName>
+        <default>false</default>
+        <label>Demonstrativo IR -  I/S FI</label>
+    </customValue>
+    <customValue>
+        <fullName>Demonstrativo IR - P/A</fullName>
+        <default>false</default>
+        <label>Demonstrativo IR - P/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Demonstrativo IR - Remessa</fullName>
+        <default>false</default>
+        <label>Demonstrativo IR - Remessa</label>
+    </customValue>
+    <customValue>
+        <fullName>Demonstrativo IR - V/P</fullName>
+        <default>false</default>
+        <label>Demonstrativo IR - V/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Demonstrativo IR - Valores</fullName>
+        <default>false</default>
+        <label>Demonstrativo IR - Valores</label>
+    </customValue>
+    <customValue>
+        <fullName>Dependentes</fullName>
+        <default>false</default>
+        <label>Dependentes</label>
+    </customValue>
+    <customValue>
+        <fullName>Dependentes Previ</fullName>
+        <default>false</default>
+        <label>Dependentes Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>Descumprimento de prazo</fullName>
+        <default>false</default>
+        <label>Descumprimento de prazo</label>
+    </customValue>
+    <customValue>
+        <fullName>Dívidas/Informações</fullName>
+        <default>false</default>
+        <label>Dívidas/Informações</label>
+    </customValue>
+    <customValue>
+        <fullName>Dívidas/Liquidação</fullName>
+        <default>false</default>
+        <label>Dívidas/Liquidação</label>
+    </customValue>
+    <customValue>
+        <fullName>Encaminhamento/Esclarecimentos</fullName>
+        <default>false</default>
+        <label>Encaminhamento/Esclarecimentos</label>
+    </customValue>
+    <customValue>
+        <fullName>Endereço</fullName>
+        <default>false</default>
+        <label>Endereço</label>
+    </customValue>
+    <customValue>
+        <fullName>Endereço/Pessoais</fullName>
+        <default>false</default>
+        <label>Endereço/Pessoais</label>
+    </customValue>
+    <customValue>
+        <fullName>Entrada de Recursos</fullName>
+        <default>false</default>
+        <label>Entrada de Recursos</label>
+    </customValue>
+    <customValue>
+        <fullName>Esclarecimentos</fullName>
+        <default>false</default>
+        <label>Esclarecimentos</label>
+    </customValue>
+    <customValue>
+        <fullName>Esclarecimentos/Valores 1</fullName>
+        <default>false</default>
+        <label>Esclarecimentos/Valores 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Esclarecimentos/Valores 2</fullName>
+        <default>false</default>
+        <label>Esclarecimentos/Valores 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Esclarecimentos - 2Via</fullName>
+        <default>false</default>
+        <label>Esclarecimentos - 2Via</label>
+    </customValue>
+    <customValue>
+        <fullName>Esclarecimentos - C/B</fullName>
+        <default>false</default>
+        <label>Esclarecimentos - C/B</label>
+    </customValue>
+    <customValue>
+        <fullName>Esclarecimentos - E</fullName>
+        <default>false</default>
+        <label>Esclarecimentos - E</label>
+    </customValue>
+    <customValue>
+        <fullName>Esclarecimentos - P/N/C</fullName>
+        <default>false</default>
+        <label>Esclarecimentos - P/N/C</label>
+    </customValue>
+    <customValue>
+        <fullName>Esclarecimentos - POR</fullName>
+        <default>false</default>
+        <label>Esclarecimentos - POR</label>
+    </customValue>
+    <customValue>
+        <fullName>ES-FINIMOB</fullName>
+        <default>false</default>
+        <label>ES-FINIMOB</label>
+    </customValue>
+    <customValue>
+        <fullName>Extrato</fullName>
+        <default>false</default>
+        <label>Extrato</label>
+    </customValue>
+    <customValue>
+        <fullName>Fale Conosco</fullName>
+        <default>false</default>
+        <label>Fale Conosco</label>
+    </customValue>
+    <customValue>
+        <fullName>Falta de clareza nas respostas</fullName>
+        <default>false</default>
+        <label>Falta de clareza nas respostas</label>
+    </customValue>
+    <customValue>
+        <fullName>FGTS</fullName>
+        <default>false</default>
+        <label>FGTS</label>
+    </customValue>
+    <customValue>
+        <fullName>Fora do Convênio</fullName>
+        <default>false</default>
+        <label>Fora do Convênio</label>
+    </customValue>
+    <customValue>
+        <fullName>Governança Previ</fullName>
+        <default>false</default>
+        <label>Governança Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>Identificação p/cadastrar  URA</fullName>
+        <default>false</default>
+        <label>Identificação p/cadastrar  URA</label>
+    </customValue>
+    <customValue>
+        <fullName>Imposto de Renda</fullName>
+        <default>false</default>
+        <label>Imposto de Renda</label>
+    </customValue>
+    <customValue>
+        <fullName>Inadimplência/Jurídico</fullName>
+        <default>false</default>
+        <label>Inadimplência/Jurídico</label>
+    </customValue>
+    <customValue>
+        <fullName>Inadimplência/Jurídico - I/S ES</fullName>
+        <default>false</default>
+        <label>Inadimplência/Jurídico - I/S ES</label>
+    </customValue>
+    <customValue>
+        <fullName>Inadimplência/Jurídico  - I/S FI</fullName>
+        <default>false</default>
+        <label>Inadimplência/Jurídico  - I/S FI</label>
+    </customValue>
+    <customValue>
+        <fullName>Informação/2ª via</fullName>
+        <default>false</default>
+        <label>Informação/2ª via</label>
+    </customValue>
+    <customValue>
+        <fullName>Inscrição</fullName>
+        <default>false</default>
+        <label>Inscrição</label>
+    </customValue>
+    <customValue>
+        <fullName>Inscrição - I/S CAPEC</fullName>
+        <default>false</default>
+        <label>Inscrição - I/S CAPEC</label>
+    </customValue>
+    <customValue>
+        <fullName>Inscrição - V/P</fullName>
+        <default>false</default>
+        <label>Inscrição - V/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Investimentos e Participações</fullName>
+        <default>false</default>
+        <label>Investimentos e Participações</label>
+    </customValue>
+    <customValue>
+        <fullName>IR-Opção Tabela Regressiva</fullName>
+        <default>false</default>
+        <label>IR-Opção Tabela Regressiva</label>
+    </customValue>
+    <customValue>
+        <fullName>Isenção</fullName>
+        <default>false</default>
+        <label>Isenção</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquidação/Amortização</fullName>
+        <default>false</default>
+        <label>Liquidação/Amortização</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquidação/Amortização - F/I FI</fullName>
+        <default>false</default>
+        <label>Liquidação/Amortização - F/I FI</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquidação/Amortização - I/S ES</fullName>
+        <default>false</default>
+        <label>Liquidação/Amortização - I/S ES</label>
+    </customValue>
+    <customValue>
+        <fullName>Meu benefício</fullName>
+        <default>false</default>
+        <label>Meu benefício</label>
+    </customValue>
+    <customValue>
+        <fullName>Modalidades</fullName>
+        <default>false</default>
+        <label>Modalidades</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Não consegue contato</fullName>
+        <default>false</default>
+        <label>Não consegue contato</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros</fullName>
+        <default>false</default>
+        <label>Outros</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros D/C</fullName>
+        <default>false</default>
+        <label>Outros D/C</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros I/PF</fullName>
+        <default>false</default>
+        <label>Outros I/PF</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros IS/ES</fullName>
+        <default>false</default>
+        <label>Outros IS/ES</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros IS/FI</fullName>
+        <default>false</default>
+        <label>Outros IS/FI</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros IS/P CAPEC</fullName>
+        <default>false</default>
+        <label>Outros IS/P CAPEC</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros M/A</fullName>
+        <default>false</default>
+        <label>Outros M/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros M/P</fullName>
+        <default>false</default>
+        <label>Outros M/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros O/F</fullName>
+        <default>false</default>
+        <label>Outros O/F</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros O/O</fullName>
+        <default>false</default>
+        <label>Outros O/O</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros O/PF</fullName>
+        <default>false</default>
+        <label>Outros O/PF</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros O/RC</fullName>
+        <default>false</default>
+        <label>Outros O/RC</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros O/S</fullName>
+        <default>false</default>
+        <label>Outros O/S</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros R/R</fullName>
+        <default>false</default>
+        <label>Outros R/R</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros VP/PF</fullName>
+        <default>false</default>
+        <label>Outros VP/PF</label>
+    </customValue>
+    <customValue>
+        <fullName>Pagamento</fullName>
+        <default>false</default>
+        <label>Pagamento</label>
+    </customValue>
+    <customValue>
+        <fullName>Pagamento Prestações - Boleto</fullName>
+        <default>false</default>
+        <label>Pagamento Prestações - Boleto</label>
+    </customValue>
+    <customValue>
+        <fullName>Pagamento - processo</fullName>
+        <default>false</default>
+        <label>Pagamento - processo</label>
+    </customValue>
+    <customValue>
+        <fullName>Pagamento - requerimento</fullName>
+        <default>false</default>
+        <label>Pagamento - requerimento</label>
+    </customValue>
+    <customValue>
+        <fullName>Perfil de Investimentos</fullName>
+        <default>false</default>
+        <label>Perfil de Investimentos</label>
+    </customValue>
+    <customValue>
+        <fullName>Perfis de Investimento</fullName>
+        <default>false</default>
+        <label>Perfis de Investimento</label>
+    </customValue>
+    <customValue>
+        <fullName>Pessoais</fullName>
+        <default>false</default>
+        <label>Pessoais</label>
+    </customValue>
+    <customValue>
+        <fullName>Planos/Valores</fullName>
+        <default>false</default>
+        <label>Planos/Valores</label>
+    </customValue>
+    <customValue>
+        <fullName>Portabilidade de Entrada</fullName>
+        <default>false</default>
+        <label>Portabilidade de Entrada</label>
+    </customValue>
+    <customValue>
+        <fullName>Portabilidade de Saída</fullName>
+        <default>false</default>
+        <label>Portabilidade de Saída</label>
+    </customValue>
+    <customValue>
+        <fullName>Prestação</fullName>
+        <default>false</default>
+        <label>Prestação</label>
+    </customValue>
+    <customValue>
+        <fullName>Previ</fullName>
+        <default>false</default>
+        <label>Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>Processo</fullName>
+        <default>false</default>
+        <label>Processo</label>
+    </customValue>
+    <customValue>
+        <fullName>Processo Eleitoral Previ</fullName>
+        <default>false</default>
+        <label>Processo Eleitoral Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>Reajuste</fullName>
+        <default>false</default>
+        <label>Reajuste</label>
+    </customValue>
+    <customValue>
+        <fullName>Reajuste - M/P</fullName>
+        <default>false</default>
+        <label>Reajuste - M/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Recadastramento</fullName>
+        <default>false</default>
+        <label>Recadastramento</label>
+    </customValue>
+    <customValue>
+        <fullName>Recadastramento - M/P</fullName>
+        <default>false</default>
+        <label>Recadastramento - M/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Recadastramento - P/A</fullName>
+        <default>false</default>
+        <label>Recadastramento - P/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Recebimento do Ofício</fullName>
+        <default>false</default>
+        <label>Recebimento do Ofício</label>
+    </customValue>
+    <customValue>
+        <fullName>Regimes de Tributação</fullName>
+        <default>false</default>
+        <label>Regimes de Tributação</label>
+    </customValue>
+    <customValue>
+        <fullName>Regressiva</fullName>
+        <default>false</default>
+        <label>Regressiva</label>
+    </customValue>
+    <customValue>
+        <fullName>Reingresso</fullName>
+        <default>false</default>
+        <label>Reingresso</label>
+    </customValue>
+    <customValue>
+        <fullName>Relatório Anual</fullName>
+        <default>false</default>
+        <label>Relatório Anual</label>
+    </customValue>
+    <customValue>
+        <fullName>Remessa</fullName>
+        <default>false</default>
+        <label>Remessa</label>
+    </customValue>
+    <customValue>
+        <fullName>Renda Certa/Renda Mensal Temp.</fullName>
+        <default>false</default>
+        <label>Renda Certa/Renda Mensal Temp.</label>
+    </customValue>
+    <customValue>
+        <fullName>Rendas</fullName>
+        <default>false</default>
+        <label>Rendas</label>
+    </customValue>
+    <customValue>
+        <fullName>Repactuação</fullName>
+        <default>false</default>
+        <label>Repactuação</label>
+    </customValue>
+    <customValue>
+        <fullName>Requisição de cópias</fullName>
+        <default>false</default>
+        <label>Requisição de cópias</label>
+    </customValue>
+    <customValue>
+        <fullName>Resenha Previ</fullName>
+        <default>false</default>
+        <label>Resenha Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>Reservas/Contribuições</fullName>
+        <default>false</default>
+        <label>Reservas/Contribuições</label>
+    </customValue>
+    <customValue>
+        <fullName>Resgate</fullName>
+        <default>false</default>
+        <label>Resgate</label>
+    </customValue>
+    <customValue>
+        <fullName>Resgate Parcial</fullName>
+        <default>false</default>
+        <label>Resgate Parcial</label>
+    </customValue>
+    <customValue>
+        <fullName>Revisão</fullName>
+        <default>false</default>
+        <label>Revisão</label>
+    </customValue>
+    <customValue>
+        <fullName>Revisão - C/P</fullName>
+        <default>false</default>
+        <label>Revisão - C/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Revisão do Benefício</fullName>
+        <default>false</default>
+        <label>Revisão do Benefício</label>
+    </customValue>
+    <customValue>
+        <fullName>Revista PREVI</fullName>
+        <default>false</default>
+        <label>Revista PREVI</label>
+    </customValue>
+    <customValue>
+        <fullName>Saída de Recursos</fullName>
+        <default>false</default>
+        <label>Saída de Recursos</label>
+    </customValue>
+    <customValue>
+        <fullName>Saldo Individual BET</fullName>
+        <default>false</default>
+        <label>Saldo Individual BET</label>
+    </customValue>
+    <customValue>
+        <fullName>Seleção de Conselheiros</fullName>
+        <default>false</default>
+        <label>Seleção de Conselheiros</label>
+    </customValue>
+    <customValue>
+        <fullName>Senha</fullName>
+        <default>false</default>
+        <label>Senha</label>
+    </customValue>
+    <customValue>
+        <fullName>Site</fullName>
+        <default>false</default>
+        <label>Site</label>
+    </customValue>
+    <customValue>
+        <fullName>Site - A/N</fullName>
+        <default>false</default>
+        <label>Site - A/N</label>
+    </customValue>
+    <customValue>
+        <fullName>Site - N/P</fullName>
+        <default>false</default>
+        <label>Site - N/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Situação do Processo</fullName>
+        <default>false</default>
+        <label>Situação do Processo</label>
+    </customValue>
+    <customValue>
+        <fullName>Situação do Processo C/P</fullName>
+        <default>false</default>
+        <label>Situação do Processo C/P</label>
+    </customValue>
+    <customValue>
+        <fullName>Solicitação</fullName>
+        <default>false</default>
+        <label>Solicitação</label>
+    </customValue>
+    <customValue>
+        <fullName>Substituição de Garantia</fullName>
+        <default>false</default>
+        <label>Substituição de Garantia</label>
+    </customValue>
+    <customValue>
+        <fullName>Suspensão</fullName>
+        <default>false</default>
+        <label>Suspensão</label>
+    </customValue>
+    <customValue>
+        <fullName>Tempo de INSS</fullName>
+        <default>false</default>
+        <label>Tempo de INSS</label>
+    </customValue>
+    <customValue>
+        <fullName>Tempo de Previ</fullName>
+        <default>false</default>
+        <label>Tempo de Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>Termo de Adesão</fullName>
+        <default>false</default>
+        <label>Termo de Adesão</label>
+    </customValue>
+    <customValue>
+        <fullName>Transferência Bancos x Previ</fullName>
+        <default>false</default>
+        <label>Transferência Bancos x Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>Transferência Previ x Previ</fullName>
+        <default>false</default>
+        <label>Transferência Previ x Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>URA</fullName>
+        <default>false</default>
+        <label>URA</label>
+    </customValue>
+    <customValue>
+        <fullName>URA -A/N</fullName>
+        <default>false</default>
+        <label>URA -A/N</label>
+    </customValue>
+    <customValue>
+        <fullName>Situação do Processo -Pens</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Situação do Processo -Pens</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancelamento - I/S ES</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cancelamento - I/S ES</label>
+    </customValue>
+    <customValue>
+        <fullName>Inadimplência/Jurídico - I/S FI</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Inadimplência/Jurídico - I/S FI</label>
+    </customValue>
+    <customValue>
+        <fullName>Demonstrativo IR - I/S FI</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Demonstrativo IR - I/S FI</label>
+    </customValue>
+    <customValue>
+        <fullName>Identificação p/cadastrar URA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Identificação p/cadastrar URA</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancelamento - V/P</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cancelamento - V/P</label>
+    </customValue>
+    <description>Lista de Sub-Serviços</description>
+    <masterLabel>Sub-Serviço</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <email>geratconfidencial@previ.com.br</email>
+    <name>Gerat</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>Gerat</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueRoutingConfig>Gerat</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Incident</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Problem</sobjectType>
+    </queueSobject>
+</Queue>

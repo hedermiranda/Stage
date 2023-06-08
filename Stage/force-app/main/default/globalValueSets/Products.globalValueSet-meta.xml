@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Aposentadoria</fullName>
+        <default>false</default>
+        <label>Aposentadoria</label>
+    </customValue>
+    <customValue>
+        <fullName>Atendimento de 1ª instância</fullName>
+        <default>false</default>
+        <label>Atendimento de 1ª instância</label>
+    </customValue>
+    <customValue>
+        <fullName>Cadastro</fullName>
+        <default>false</default>
+        <label>Cadastro</label>
+    </customValue>
+    <customValue>
+        <fullName>Canais de Relacionamento</fullName>
+        <default>false</default>
+        <label>Canais de Relacionamento</label>
+    </customValue>
+    <customValue>
+        <fullName>Cartão PREVI</fullName>
+        <default>false</default>
+        <label>Cartão PREVI</label>
+    </customValue>
+    <customValue>
+        <fullName>Empréstimo Simples</fullName>
+        <default>false</default>
+        <label>Empréstimo Simples</label>
+    </customValue>
+    <customValue>
+        <fullName>Financiamento Imobiliário</fullName>
+        <default>false</default>
+        <label>Financiamento Imobiliário</label>
+    </customValue>
+    <customValue>
+        <fullName>Folha de Pagamentos</fullName>
+        <default>false</default>
+        <label>Folha de Pagamentos</label>
+    </customValue>
+    <customValue>
+        <fullName>Indicativo de Melhoria</fullName>
+        <default>false</default>
+        <label>Indicativo de Melhoria</label>
+    </customValue>
+    <customValue>
+        <fullName>Indícios de Corrupção</fullName>
+        <default>false</default>
+        <label>Indícios de Corrupção</label>
+    </customValue>
+    <customValue>
+        <fullName>Indícios de Desvio de Conduta</fullName>
+        <default>false</default>
+        <label>Indícios de Desvio de Conduta</label>
+    </customValue>
+    <customValue>
+        <fullName>Indícios de Discriminação</fullName>
+        <default>false</default>
+        <label>Indícios de Discriminação</label>
+    </customValue>
+    <customValue>
+        <fullName>Indícios de Quebra de Dados/Informações</fullName>
+        <default>false</default>
+        <label>Indícios de Quebra de Dados/Informações</label>
+    </customValue>
+    <customValue>
+        <fullName>Indícios de Violação de Normas</fullName>
+        <default>false</default>
+        <label>Indícios de Violação de Normas</label>
+    </customValue>
+    <customValue>
+        <fullName>Indídios de Fraude</fullName>
+        <default>false</default>
+        <label>Indídios de Fraude</label>
+    </customValue>
+    <customValue>
+        <fullName>Insatisfação com as regras/políticas da Previ</fullName>
+        <default>false</default>
+        <label>Insatisfação com as regras/políticas da Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros</fullName>
+        <default>false</default>
+        <label>Outros</label>
+    </customValue>
+    <customValue>
+        <fullName>Pecúlio</fullName>
+        <default>false</default>
+        <label>Pecúlio</label>
+    </customValue>
+    <customValue>
+        <fullName>Pensão</fullName>
+        <default>false</default>
+        <label>Pensão</label>
+    </customValue>
+    <customValue>
+        <fullName>Previ Família</fullName>
+        <default>false</default>
+        <label>Previ Família</label>
+    </customValue>
+    <customValue>
+        <fullName>Behavioral_Issues</fullName>
+        <default>false</default>
+        <label>Questões comportamentais</label>
+    </customValue>
+    <customValue>
+        <fullName>Reclamatória Trabalhista</fullName>
+        <default>false</default>
+        <label>Reclamatória Trabalhista</label>
+    </customValue>
+    <customValue>
+        <fullName>Reservas/Contribuição</fullName>
+        <default>false</default>
+        <label>Reservas/Contribuição</label>
+    </customValue>
+    <customValue>
+        <fullName>Senha</fullName>
+        <default>false</default>
+        <label>Senha</label>
+    </customValue>
+    <customValue>
+        <fullName>Relação do fornecedor com a Previ</fullName>
+        <default>false</default>
+        <label>Relação do fornecedor com a Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>Relação do funcionário com a Previ</fullName>
+        <default>false</default>
+        <label>Relação do funcionário com a Previ</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Documentos e Formulários</fullName>
+        <default>false</default>
+        <label>Documentos e Formulários</label>
+    </customValue>
+    <customValue>
+        <fullName>Folha de Pagamento</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Folha de Pagamento</label>
+    </customValue>
+    <customValue>
+        <fullName>Indícios de Fraude</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Indícios de Fraude</label>
+    </customValue>
+    <description>Campo para informar Produto</description>
+    <masterLabel>Produto</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

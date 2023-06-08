@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PresenceUserConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <profiles>
+            <profile>Admin</profile>
+        </profiles>
+        <users>
+            <user>service.cmcjzrp6qymo@example.com</user>
+        </users>
+    </assignments>
+    <capacity>3</capacity>
+    <declineReasons>Atendimento_Telefonico</declineReasons>
+    <enableAutoAccept>false</enableAutoAccept>
+    <enableDecline>true</enableDecline>
+    <enableDeclineReason>true</enableDeclineReason>
+    <enableDisconnectSound>true</enableDisconnectSound>
+    <enableRequestSound>true</enableRequestSound>
+    <label>Atendente, Assistente, Supervisor, Analista,Gerente</label>
+</PresenceUserConfig>

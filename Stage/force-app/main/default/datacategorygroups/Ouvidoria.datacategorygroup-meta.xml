@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Investimentos</label>
+                <name>Investimentos</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Indícios de Corrupção</label>
+                <name>Ind_cios_de_Corrup_o</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Indícios de Desvio de Conduta</label>
+                <name>Indicios_de_Desvio_de_Conduta</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Indícios de Discriminação</label>
+                <name>Ind_cios_de_Discrimina_o</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Questões comportamentais</label>
+                <name>Questoes_comportamentais</name>
+            </dataCategory>
+            <label>Grupo de Assunto</label>
+            <name>Grupo_de_Assunto</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <description>Grupo utilizado para os Grupos de Categorias da Ouvidoria</description>
+    <label>Ouvidoria</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

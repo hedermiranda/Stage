@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alcan_ou_metade_do_SLA</fullName>
+        <description>Alcançou metade do SLA</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Avisar_tempo_restante</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_2_minutos_antes_que_o_marco_expire</fullName>
+        <description>Aviso de 2 minutos antes que o marco expire</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>romao.freitas.previ@ilia.digital</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SUPPORTCaseescalationnotificationSAMPLE</template>
+    </alerts>
+    <alerts>
+        <fullName>Notifica_Analistas</fullName>
+        <description>Notifica Analistas</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Ouvidoria</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Previ/Case_Open</template>
+    </alerts>
+    <alerts>
+        <fullName>Notifica_Ouvidora</fullName>
+        <description>Notifica Ouvidora</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Ouvidoria</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Previ/Ouvidora_Mail</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ChangePriorityToHigh</fullName>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+        <name>Altera a prioridade do caso para alta.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

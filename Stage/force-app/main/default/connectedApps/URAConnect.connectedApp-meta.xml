@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>leonardo.souza@ilia.digital</contactEmail>
+    <label>URAConnect</label>
+    <oauthConfig>
+        <callbackUrl>https://previ--stage.sandbox.lightning.force.com/</callbackUrl>
+        <consumerKey>3MVG9qaMEyNEoADL4UpRo5RBfWnRF6fvlosvEnRZbhuF126RYP7e9NCms6BvsI0q1jKcn12JPhoVjY_0Jq1eB</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

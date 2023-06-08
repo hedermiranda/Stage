@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <businessHours>Ouvidoria Telefone</businessHours>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <businessHours>Ouvidoria Telefone</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Atendimento inicial</milestoneName>
+        <minutesToComplete>240</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Alcan_ou_metade_do_SLA</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>-120</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>Ouvidoria Telefone</businessHours>
+        <criteriaBooleanFilter>1 AND 3 AND 4 AND (2 OR 5)</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Ouvidoria_resolve__c</field>
+            <operation>equals</operation>
+            <value>true</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Em Andamento</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Criticality_Level__c</field>
+            <operation>equals</operation>
+            <value>Média Criticidade</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Occupation_area__c</field>
+            <operation>equals</operation>
+            <value>Ouvir</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Aguardando Cliente</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Ouvidoria - Direto</milestoneName>
+        <minutesToComplete>4560</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Alcan_ou_metade_do_SLA</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>-2280</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>Ouvidoria Telefone</businessHours>
+        <criteriaBooleanFilter>1 AND 3 AND 4 AND (2 OR 5)</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Occupation_area__c</field>
+            <operation>equals</operation>
+            <value>Ouvir</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Em Andamento</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Ouvidoria_resolve__c</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Criticality_Level__c</field>
+            <operation>equals</operation>
+            <value>Média Criticidade</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Aguardando Cliente</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Ouvidoria</milestoneName>
+        <minutesToComplete>2640</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Alcan_ou_metade_do_SLA</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>-1320</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>Ouvidoria Telefone</businessHours>
+        <milestoneCriteriaFormula>AND(NOT(ISPICKVAL(Occupation_area__c, &apos;Ouvir&apos;))
+					,ISPICKVAL(Criticality_Level__c, &apos;Média Criticidade&apos;),
+					OR(ISPICKVAL(Status, &apos;Aguardando 2° nível&apos;),
+								ISPICKVAL(Status, &apos;Em Andamento 2° nível&apos;)))</milestoneCriteriaFormula>
+        <milestoneName>BKO</milestoneName>
+        <minutesToComplete>1920</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Alcan_ou_metade_do_SLA</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>-960</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>
