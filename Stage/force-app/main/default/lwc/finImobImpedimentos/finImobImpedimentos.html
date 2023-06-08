@@ -1,0 +1,30 @@
+<template>
+    <table class="fixed_header slds-no-row-hover slds-table slds-table_bordered slds-table_striped">
+        <thead>
+            <tr>
+                <th scope="col">Impedimento</th>
+                <th scope="col">Justificativa</th>
+                <th scope="col">Vigência - Início</th>
+                <th scope="col">Vigência - Fim</th>
+            </tr>     
+        </thead>
+        <template for:each={listImpedimentos} for:item="item" for:index="index">            
+            <tbody key={item.id}>
+                <tr>
+                    <td scope="row" class="slds-truncate slds-cell-wrap">'{item.tipo_impdto}'</td>
+                    <td scope="row" class="slds-truncate slds-cell-wrap">{item.justificativa}</td>  
+                    <td scope="row" >{item.inicio_Vigencia}</td> 
+                    <td scope="row">{item.fim_Vigencia}</td>   
+                </tr>                
+            </tbody>
+        </template> 
+        <!-- <tbody>
+            <tr class="slds-hint-parent">
+                <td scope="row">IMPEDE FORNECIMENTO DE INFORMAÇÕES SOBRE CONTRATO</td>
+                <td scope="row" class="slds-truncate slds-cell-wrap">Contrato com ação jurídica em curso, sob condução do escritório Paulo Alarcon Advogados - Rua Colombo, nº 1216 ¿ Ahú ¿ Curitiba ¿ Paraná Fone: (41) 3013-1777  - civel@padv.com.br\n</td>  
+                <td scope="row" >16/03/2006</td> 
+                <td scope="row" ></td>   
+            </tr>                
+        </tbody> -->      
+    </table>
+</template>

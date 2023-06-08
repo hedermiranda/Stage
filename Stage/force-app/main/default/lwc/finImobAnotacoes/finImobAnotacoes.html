@@ -1,0 +1,62 @@
+<template>
+    <table class="fixed_header slds-no-row-hover slds-table slds-table_bordered slds-table_striped">
+        <thead>
+            <tr>
+                <th scope="col">Data de inclusão</th>
+                <th scope="col">Informações</th>
+            </tr> 
+        </thead>   
+        <template for:each={anotacoes} for:item="item" for:index="index">            
+            <tbody key={item.id}>
+                <tr>
+                    <td scope="row">{item.dat_incl}</td>
+                    <td scope="row">{item.dsc_anotac_cfi}<lightning-button-icon class="slds-m-left_xx-small" size="small" icon-name="action:record" variant="bare" onclick={openAnotacoes}></lightning-button-icon></td>
+                </tr>                
+            </tbody>
+        </template> 
+        <!--  <tbody>
+            <tr class="slds-hint-parent">
+                <td scope="row">2020-11-01 05:40:46</td>
+                <td scope="row">Texto para abrir modal <lightning-button-icon class="slds-m-left_xx-small" size="small" icon-name="action:record" variant="bare" onclick={openAnotacoes}></lightning-button-icon></td> 
+            </tr>                
+        </tbody>  -->     
+    </table>
+    <template if:true={modalAnotacoes}>
+        <!--<section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_small">
+            <div class="slds-modal__container">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeAnotacoes}>
+                    <lightning-icon icon-name="utility:close"
+                        alternative-text="close"
+                        variant="inverse">
+                    </lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <div class="slds-modal__header">
+                    <b><h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Anotações</h1></b>
+                </div>
+                <div class="slds-modal__content">
+                    <lightning-formatted-text value={value}></lightning-formatted-text>
+                </div>                
+            </div>
+        </section> 
+        <div class="slds-backdrop slds-backdrop_open"></div>-->
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open" >
+            <div class="slds-modal__container">
+                <header class="slds-modal__header" >
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeAnotacoes}>
+                        <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Anotações</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="background-color: #f3f3f3;">
+                    <lightning-formatted-text value={value}></lightning-formatted-text>
+                </div>
+            </div>
+        </section>
+    </template>
+    
+</template>

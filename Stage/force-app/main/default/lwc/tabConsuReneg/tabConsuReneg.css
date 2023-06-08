@@ -1,0 +1,13 @@
+th[scope='col'] {
+    background-color: #54698d;
+    color: #fff;
+    height: 25px;
+}
+
+td[scope='row'] {
+    height: 25px;
+}
+
+.spinner {
+    height: 120px;
+}

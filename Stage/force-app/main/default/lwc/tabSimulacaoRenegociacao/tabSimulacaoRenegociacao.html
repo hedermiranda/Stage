@@ -1,0 +1,72 @@
+<template>
+<template if:true={loaded}>         
+    <div class="spinner" style="position: relative;">
+    <lightning-spinner alternative-text="Loading" variant="brand"></lightning-spinner>
+</div>
+</template>
+
+<template if:false={loaded}>
+    <p class="slds-border_bottom" style="font-size:16px;color: #445e8a;padding-top: 45px;"><b>Simulação ES Renegociação</b></p>
+<br></br>
+
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table slds-table_bordered slds-scrollable_x" id="myTable">
+
+<thead class="slds-m-top_small">
+<tr class="slds-hint-parent">
+    <th scope="col">Num. Proposta</th>
+    <th scope="col">Modalidade</th>
+    <th scope="col">Saldo devedor atualizado</th>
+    <th scope="col">Valor atual da prestação</th>
+    <th scope="col">Prest. contratadas</th>
+    <th scope="col">Prest. cobradas</th>
+    <th scope="col">Prest. pagas</th>
+    <th scope="col">Prest. restantes</th>     
+</tr>
+</thead>
+
+<template for:each={listTableAll} for:item="item" for:index="index">
+
+<tbody key={item.id}>
+<tr>  
+    <td scope="row"><lightning-button-icon class="slds-m-right_small" access-key={index} onclick={handleChange} icon-name="action:preview" disabled={item.isDisabled} variant="bare"></lightning-button-icon> {item.id}</td>      
+    <td scope="row">{item.siglaModalidade}</td>
+    <td scope="row">{item.valorSaldoDevedorAtual}</td>  
+    <td scope="row">{item.valorPrestacao}</td> 
+    <td scope="row">{item.qtdPrestacoesIniciais}</td>  
+    <td scope="row">{item.qtdPrestacoesCobradas}</td> 
+    <td scope="row">{item.qtdPrestacoesPagas}</td>  
+    <td scope="row">{item.qtdPrestacoesRestantes}</td>     
+</tr>
+<template if:true={item.areDetailsVisible}>
+    <tr>
+        <td colspan="12">
+            <div class="slds-scrollable_x" style="padding-bottom: 12px;height:50%;width:100%;">
+                </br>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table slds-table_bordered slds-scrollable_x" style="border: double;">
+                <thead key={item.id}>
+                <tr>
+                <th scope="col" style="background-color: #54698d;">Saldo Devedor</th>
+                    <th scope="col" style="background-color: #54698d;">Novo Prazo (em meses) </th>
+                    <th scope="col" style="background-color: #54698d;">Valor da prestação inicial da Renegociação</th>
+                </tr>
+                </thead>                             
+                <tbody key={item.id}>
+                <tr>          
+                    <td scope="row" >{objRenegCondic.saldoDevedor}</td>
+                    <td scope="row" >{objRenegCondic.prazo}</td>
+                    <td scope="row">{objRenegCondic.prestacaoInicial}</td>    
+                </tr>
+                    </tbody>
+                </table>
+                    
+            </div>
+        </td>
+    </tr>
+    </template>
+
+</tbody>
+</template>
+
+</table>
+</template>
+</template>

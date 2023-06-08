@@ -1,0 +1,33 @@
+<template>
+    <table class="fixed_header slds-table slds-no-row-hover slds-table_bordered slds-table_striped">    
+        <thead>
+            <tr>
+                <th scope="col">Matrícula</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Contrato</th>
+                <th scope="col">Financiamento</th>
+                <th scope="col">Situação contrato</th>
+            </tr>    
+        </thead> 
+        <template for:each={listCondominos} for:item="item" for:index="index">            
+            <tbody key={item.id}>
+                <tr>
+                    <td scope="row">{item.mat_condom}</td>
+                    <td scope="row">{item.nome_condom}</td>  
+                    <td scope="row">{item.ctr_condom}</td> 
+                    <td scope="row">{item.financ}</td> 
+                    <td scope="row">{item.sit.ctr}</td>   
+                </tr>                
+            </tbody>
+        </template> 
+        <!-- <tbody>
+            <tr class="slds-hint-parent">
+                <td scope="row">4.794988E+6</td>
+                <td scope="row" class="slds-truncate slds-cell-wrap">JOAO BOSCO COLEN</td>  
+                <td scope="row" >6.13167E+5</td> 
+                <td scope="row" class="slds-truncate slds-cell-wrap">Contrato com ação jurídica em curso, sob condução do escritório Paulo Alarcon Advogados - Rua Colombo, nº 1216 ¿ Ahú ¿ Curitiba ¿ Paraná Fone: (41) 3013-1777  - civel@padv.com.br\n</td>  
+                <td scope="row" >Liquidado por Recursos Próprios</td>   
+            </tr>                
+        </tbody>  -->     
+    </table>
+</template>

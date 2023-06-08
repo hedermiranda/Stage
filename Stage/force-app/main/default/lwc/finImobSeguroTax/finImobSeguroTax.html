@@ -1,0 +1,86 @@
+<template>
+    <lightning-tabset variant="scoped">
+        <lightning-tab label="Cobertura do Seguro">
+            <table class="fixed_header slds-no-row-hover slds-table slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Seguradora</th>
+                        <th scope="col">Total de coberturas</th>
+                        <th scope="col">Início da vigência</th>
+                        <th scope="col">Fim da vigência</th>        
+                    </tr>     
+                </thead>            
+                <tbody>
+                    <tr>
+                        <td scope="row">{seguros.seguradora}</td>
+                        <td scope="row">{seguros.val_seguro}</td>  
+                        <td scope="row">{seguros.dat_inic_vigenc}</td> 
+                        <td scope="row">{seguros.dat_fim_vigenc}</td>   
+                    </tr>                
+                </tbody>
+                <!-- <tbody>
+                    <tr class="slds-hint-parent">
+                        <td scope="row">PRTC</td>
+                        <td scope="row" class="slds-truncate slds-cell-wrap">20/04/2023</td>  
+                        <td scope="row" >1761.95</td> 
+                        <td scope="row" >1761.95</td>
+   
+                    </tr>                
+                </tbody>-->       
+            </table>
+            <br><br>            
+            <table class="fixed_header slds-no-row-hover slds-table slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Descrição dos Tipos de Coberturas</th>
+                        <th scope="col">Valor da Cobertura</th>    
+                    </tr>   
+                 </thead> 
+                <template for:each={coberturas} for:item="item" for:index="index">            
+                    <tbody key={item.id}>
+                        <tr>
+                            <td scope="row">{item.tp_cob_segurada}</td>
+                            <td scope="row">{item.val_cobert}</td> 
+                        </tr>                
+                    </tbody>
+                </template> 
+                <!--  <tbody>
+                    <tr class="slds-hint-parent">
+                        <td scope="row">PRTC</td>
+                        <td scope="row" class="slds-truncate slds-cell-wrap">20/04/2023</td>
+                    </tr>                
+                </tbody>  -->     
+            </table>
+        </lightning-tab> 
+        <lightning-tab label="Cobrança do Seguro e da Taxa de Administração">
+            <table class="fixed_header slds-no-row-hover slds-table slds-table_bordered slds-table_striped">
+            <thead>
+                <tr>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Data do Evento</th>
+                    <th scope="col">Valor Total</th>
+                    <th scope="col">Valor a Receber</th>    
+                </tr>
+            </thead>
+            <template for:each={listCobrancas} for:item="item" for:index="index">            
+                <tbody key={item.id}>
+                    <tr>
+                        <td scope="row">'{item.tipo_movim}'</td>
+                        <td scope="row">{item.dat_evento}</td>  
+                        <td scope="row">{item.val_total_movim}</td> 
+                        <td scope="row">{item.val_saldo_recebe}</td>   
+                    </tr>                
+                </tbody>
+            </template> 
+            <!-- <tbody>
+                <tr class="slds-hint-parent">
+                    <td scope="row">PRTC</td>
+                    <td scope="row" class="slds-truncate slds-cell-wrap">20/04/2023</td>  
+                    <td scope="row" >1761.95</td> 
+                    <td scope="row" >1761.95</td>   
+                </tr>                
+            </tbody> -->      
+        </table>
+        </lightning-tab>
+    </lightning-tabset>
+</template>

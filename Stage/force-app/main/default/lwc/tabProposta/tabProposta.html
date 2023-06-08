@@ -1,0 +1,154 @@
+<template>
+<template if:true={loaded}>         
+        <div class="spinner" style="position: relative;">
+        <lightning-spinner alternative-text="Loading" variant="brand"></lightning-spinner>
+    </div>
+</template>
+
+<template if:false={loaded}>
+ 
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-box" id="myTable2">
+<thead>
+   <tr>
+        <th scope="col">Dt. Inclusões</th>
+        <th scope="col">Anotações</th>
+     </tr>  
+</thead>
+ 
+<template for:each={listAnotacaoAux} for:item="item" for:index="index">
+<tbody key={item.id}>
+      <tr>
+        <td scope="row">{item.dataInclusao}</td>
+        <td scope="row" style="white-space: pre-wrap;text-transform: lowercase;">{item.descricaoAnotacao}</td>      
+     </tr>   
+</tbody>
+</template>
+</table> 
+
+                                    
+    <div class="header-column slds-align_absolute-center" style="background: rgb(243 243 243);align-items: center;">
+    <b><text class="slds-text-align_left" style="padding-inline-start: 635px;padding-inline-end:5px;font-size:14px;color: #445e8a;">Propostas:</text></b>
+                    <lightning-combobox
+                    variant="vertical"
+                    name="Proposta"
+                    value={value}
+                    placeholder="---Select---"
+                    options={options}
+                    onchange={statusNovo} style="width:50%;padding-bottom:15px;padding-inline-end:15px;">
+                    </lightning-combobox>      
+    </br>
+</div>
+<template if:true={loadedProp}>         
+        <div class="spinner" style="position: relative;">
+        <lightning-spinner alternative-text="Loading" variant="brand"></lightning-spinner>
+    </div>
+</template>
+
+<template if:false={loadedProp}>
+<lightning-card>  
+<table class="fixed_header slds-table slds-no-row-hover slds-table_bordered slds-table_striped" id="myTable">
+    
+<thead class="slds-m-top_small">
+    <tr>
+        <th scope="col"><div class="slds-truncate">Num. proposta</div></th>
+        <th scope="col"><div class="slds-truncate">Modalidade</div></th>
+        <th scope="col"><div class="slds-truncate">Dt. Saldo devedor</div></th>
+        <th scope="col"><div class="slds-truncate">Saldo devedor atualizado</div></th>
+        <th scope="col"><div class="slds-truncate">Dt. Crédito</div></th>
+        <th scope="col"><div class="slds-truncate">Valor solicitado</div></th>
+        <th scope="col"><div class="slds-truncate">Valor do crédito</div></th>
+        <th scope="col"><div class="slds-truncate">prop.</div></th>
+    </tr>
+</thead>
+
+<template for:each={listTableAll} for:item="item" for:index="index">
+    
+<tbody key={item.id}>
+    <tr class="slds-hint-parent">  
+        <td scope="row"><lightning-button-icon class="slds-m-right_small" access-key={index} onclick={handleChange} icon-name="action:preview" disabled={item.isDisabled} variant="bare"></lightning-button-icon> {item.id}</td>      
+        <td scope="row">{item.modalidade}</td>
+        <td scope="row">{item.dataSaldoDevedor}</td>  
+        <td scope="row">{item.valorSaldoDevedorAtual}</td> 
+        <td scope="row">{item.dataPrevistaCredito}</td>  
+        <td scope="row">{item.valorSolicitado}</td> 
+        <td scope="row">{item.valorCredito}</td>  
+        <td scope="row">{item.indicativoEmprestimoProposta}</td>     
+    </tr>
+    <template if:true={item.areDetailsVisible}>
+        <tr class="slds-hint-parent">
+            <td colspan="8">
+                  </br>
+                    <div class="tableContainer">
+                    <table class="table slds-table slds-no-row-hover slds-table_bordered slds-table_striped slds-table_col-bordered" style="border: double;">
+
+                    <thead key={item.id}>
+                    <tr>
+                    <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Status</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Situação do empréstimo</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Saldo devedor</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Valor atual da prestação</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Prestações contratadas</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Prestações cobradas</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Prestações pagas</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Prestações restantes</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Prest. Inad. Consec.</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Protocolo Cadastr.</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Protocolo Cancel</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Dt. Real Solic.</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Taxa Administrativa</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">IOF</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Valor FQM - ES 13º</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Emp. Simples Liquidado</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Valor líquido da operação</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Verbas PAS</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Dívidas Financ. Imobiliário</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Dívidas Previ</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Agência Creditada</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Conta Creditada</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Origem da proposta - ES 13º</div></th>
+                        <th scope="col" style="background-color: #54698d;"><div class="slds-truncate">Dt. prevista fim - ES 13º</div></th>
+                    </tr>
+                    </thead>                             
+                    <tbody key={item.id}>
+                    <tr class="slds-hint-parent">          
+                        <td scope="row" >{item.situacaoProposta}</td>
+                        <td scope="row" >{ExtratObj.posicao}</td>
+                        <td scope="row">{ExtratObj.saldoDevedor}</td>
+                        <td scope="row" >{ExtratObj.prestacaoAtual}</td>
+                        <td scope="row" >{ExtratObj.qtdPrestacoesIniciais}</td>
+                        <td scope="row" >{ExtratObj.qtdPrestacoesCobradas}</td>
+                        <td scope="row" >{ExtratObj.qtdPrestacoesPagas}</td>
+                        <td scope="row" >{ExtratObj.prazoRestante}</td> 
+                        <td scope="row" >{item.qtdPrestacoesInadimpConsecutivas}</td>  
+                        <td scope="row" >{item.protocoloCadas}</td>
+                        <td scope="row" >{item.protocoloCancel}</td>  
+                        <td scope="row" >{item.dataSolicitacao}</td>   
+                        <td scope="row" >{item.valorTaxaAdmin}</td>     
+                        <td scope="row" >{item.valorIOF}</td>     
+                        <td scope="row" >{item.valFQM}</td>     
+                        <td scope="row" >{item.ESLiquidado}</td>     
+                        <td scope="row" >{item.valorCredito}</td>     
+                        <td scope="row" >{item.verbasPAS}</td>     
+                        <td scope="row" >{item.valDivFinancImob}</td>     
+                        <td scope="row" >{item.valDivPrevi}</td>     
+                        <td scope="row" >{item.agenciaCreditada}</td>     
+                        <td scope="row" >{item.contaCreditada}</td>     
+                        <td scope="row" >{item.indOrigemPropos}</td>     
+                        <td scope="row" >{item.dataPrevistaFimEmprestimo}</td>       
+                    </tr>
+                        </tbody>
+                    </table>
+                    </div>
+            </td>
+        </tr>
+        </template>
+
+</tbody>
+</template>  
+</table>
+    <p class="slds-border_bottom slds-text-align_center slds-p-around_xx-small" style="font-size:14px;color: #445e8a;"><b>Foram encontrada's {sizeRecords} Proposta's.</b></p>
+
+</lightning-card> 
+</template>
+</template>
+</template>

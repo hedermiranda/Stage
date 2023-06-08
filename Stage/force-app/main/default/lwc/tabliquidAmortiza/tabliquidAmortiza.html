@@ -1,0 +1,105 @@
+<template>
+
+    <template if:true={loaded}>         
+        <div class="spinner" style="position: relative;align-content: center;">
+        <lightning-spinner alternative-text="Loading" variant="brand"></lightning-spinner>
+    </div>
+</template>
+
+<template if:false={loaded}>
+    <p class="slds-border_bottom" style="font-size:16px;color: #445e8a;"><b>Liquidações e Amortizações</b></p>
+
+<br></br>
+    <div class="myCssNoHover">
+        <lightning-datatable
+                key-field="id"
+                data={listEmpLiq}
+                columns={columns}
+                hide-checkbox-column="true">              
+        </lightning-datatable>
+    </div>  
+<br></br> 
+
+    <lightning-tabset >
+            <lightning-tab style="font-size: 13px;" label="Simulação - Amortização">
+                
+                <div class="slds-grid slds-gutters slds-grid--pull-padded">
+                    
+                <div class="slds-col slds-size_1-of-5">                      
+                    <lightning-input type="number" name="numeroEmpAm" label="Número do Empréstimo" value={numeroEmpAm} required="true" onchange={numeroEmpAmChange} pattern="[0-9]*"></lightning-input>
+                </div> 
+                <div class="slds-col slds-size_1-of-5">                      
+                    <lightning-input type="date" name="dataDebitoAm" label="Data do Débito" value={dataDebitoAm} format="dd/MM/yyyy" required="true" date-style="short" onchange={dataDebitoAmChange}></lightning-input>
+                </div> 
+                <div class="slds-col slds-size_1-of-5">
+                    <lightning-input type="number" name="valorAmort" label="Valor a amortizar" value={valorAmort} required="true" onchange={valorAmortChange} step="0.1"></lightning-input>                              
+                </div> 
+               
+                <div class="slds-col slds-size_1-of-5">
+                <div class="slds-col slds-size_1-of-5 slds-p-around_large slds-align_absolute-center">
+                   <lightning-button data-name="Amort" label="Calcular" icon-name="utility:product_quantity_rules" variant="brand" onclick={getCalcular}></lightning-button>
+                </div> 
+             </div>    
+             </div>  
+             <br></br> 
+<template if:true={isAmortizacao}>   
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-box" id="myTable" style="width: 100%;">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col">Saldo Devedor</th>
+        <th scope="col">Prazo Estimado</th>
+        <th scope="col">Nova Prestação</th>
+        </tr>  
+    </thead>
+
+    <tbody>
+        <tr>
+        <td scope="row" style="background-color: #54698d;color:white;font-weight: bold;width:12px;">Redução de prazo:</td>
+        <td scope="row">{reduzirPrazo.saldoDevedor}</td>
+        <td scope="row">{reduzirPrazo.prestacaoAtual}</td>
+        <td scope="row">{reduzirPrazo.prazoRestante}</td>
+        </tr>   
+    </tbody>
+        <tbody>
+        <tr>
+        <td scope="row" style="background-color: #54698d;color:white;font-weight: bold;width:12px;">Redução da prestação:</td>
+        <td scope="row">{reduzirPrestacao.saldoDevedor}</td>
+        <td scope="row">{reduzirPrestacao.prestacaoAtual}</td>
+        <td scope="row">{reduzirPrestacao.prazoRestante}</td>
+        </tr>   
+    </tbody>
+</table> 
+</template>   
+            </lightning-tab>
+                <lightning-tab style="font-size: 13px;" label="Simulação - Liquidação">
+                 <div class="slds-grid slds-gutters slds-grid--pull-padded"> 
+                 <div class="slds-col slds-size_1-of-5">                      
+                    <lightning-input type="number" name="numeroEmp" label="Número do Empréstimo" value={numeroEmp} required="true" onchange={numeroEmpChange} pattern="[0-9]*"></lightning-input>
+                </div> 
+                    <div class="slds-col slds-size_1-of-5">                       
+                    <lightning-input type="date" name="dataDebito" label="Data do Débito" value={dataDebito} format="dd/MM/yyyy" required="true" date-style="short" onchange={dataDebitoChange}></lightning-input>
+                    </div>
+                <div class="slds-col slds-size_1-of-5">
+                <div class="slds-col slds-size_1-of-5 slds-p-around_large slds-align_absolute-center">
+                   <lightning-button data-name="Liquid" label="Calcular" icon-name="utility:product_quantity_rules" variant="brand" onclick={getCalcular}></lightning-button>
+                </div> 
+             </div>                  
+               </div> 
+
+               <template if:true={isLiquidacao}> 
+                               <br></br>  
+               <div class="slds-grid slds-box" style="width: 100%;">
+                               <div class="slds-col slds-size_7-of-7 ">
+                                    <text class=" slds-align_absolute-center" style="background-color: #54698d;color:white;font-weight: bold;height: 24px;">Saldo para liquidação:</text>
+                                    <text class="slds-align_absolute-center" style="background-color: #f3f3f3;">{saldoLiquidacao}</text>
+                                </div>  
+             </div>
+             </template> 
+                </lightning-tab>
+           
+      
+    </lightning-tabset>
+
+</template>
+</template>

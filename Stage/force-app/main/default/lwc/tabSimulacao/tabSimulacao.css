@@ -1,0 +1,34 @@
+.myCss table>thead .slds-cell-fixed.slds-has-button-menu,
+.myCss table>thead .slds-cell-fixed.slds-has-button-menu:hover {
+    background-color: #54698d !important;
+    color: white;
+    font-size: 13.5px;
+}
+
+
+thead th[scope='col'] {
+    font-weight: bold;
+    font-size: 13px;
+    background-color: #54698d;
+    color: white;
+}
+
+td[scope='row'] {
+    font-size: 13px;
+    background-color: #f3f3f3;
+}
+
+.spinner {
+    height: 120px;
+}
+
+.myCss table>thead .slds-cell-fixed.slds-has-button-menu {
+    background-color: #54698d !important;
+    color: white;
+}
+
+.formatFont {
+    font-weight: bold;
+    font-size: 17px;
+    height: 36px;
+}

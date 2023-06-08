@@ -1,0 +1,38 @@
+.slds-vertical-tabs {
+border: none !important;
+}
+
+.iconColor {
+    --sds-c-icon-color-background: #009f86;
+    --sds-c-icon-color-foreground-default: white;
+}
+
+
+.slds-tabs_default__link {
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #54698d;
+}
+
+.corBackGround {
+    background-color: #54698d;
+    color: white;
+    font-weight: bold;
+    font-size: 13.5px;
+}
+
+.table {
+    width: 100%;
+    display: inline-table;
+}
+
+.spinner {
+    height: 120px;
+}
+
+.myCssNoHover table>thead .slds-cell-fixed.slds-has-button-menu,
+.myCssNoHover table>thead .slds-cell-fixed.slds-has-button-menu:hover {
+    background-color: #54698d !important;
+    color: white;
+    pointer-events: none;
+}

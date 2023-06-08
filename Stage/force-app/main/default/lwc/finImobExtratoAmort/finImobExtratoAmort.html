@@ -1,0 +1,86 @@
+<template>
+    <lightning-tabset variant="scoped">
+        <lightning-tab label="Extrato">
+            <table class="fixed_header slds-no-row-hover slds-table slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Data Evento</th>
+                        <th scope="col">Data Compet.</th>
+                        <th scope="col">Nº Prtc.</th>
+                        <th scope="col">Movimento</th>
+                        <th scope="col">Índice</th>
+                        <th scope="col">CM</th>
+                        <th scope="col">Juros</th>
+                        <th scope="col">F.L.</th>
+                        <th scope="col">FQM</th>
+                        <th scope="col">Evento</th>
+                        <th scope="col">Saldo</th>    
+                    </tr>     
+                </thead>
+                <template for:each={listExtrato} for:item="item" for:index="index">            
+                    <tbody key={item.id}>
+                        <tr>
+                            <td scope="row">{item.dataEvento}</td>
+                            <td scope="row">{item.dataCompetencia}</td>  
+                            <td scope="row">{item.numeroPrestacoes}</td> 
+                            <td scope="row">{item.tipoMovimentoCFI}</td>  
+                            <td scope="row">{item.percentualIndiceUtilizado}</td>
+                            <td scope="row">{item.valorCorrecaoMonetaria}</td>  
+                            <td scope="row">{item.valorJuros}</td> 
+                            <td scope="row">{item.valorFL}</td>  
+                            <td scope="row">{item.valorFQM}</td>  
+                            <td scope="row">{item.valorEvento}</td> 
+                            <td scope="row">{item.balanco}</td> 
+                        </tr>                
+                    </tbody>
+                </template> 
+                <!-- <tbody>
+                    <tr class="slds-hint-parent">
+                        <td scope="row" >31/05/2022</td>
+                        <td scope="row" >20/06/2022</td>
+                        <td scope="row" ></td> 
+                        <td scope="row" >ATUALIZAÇÃO SALDO DEVEDOR</td>
+                        <td scope="row" >5.40958E-1</td>
+                        <td scope="row" >6.7377E+2</td>
+                        <td scope="row" >1.7526E+2</td> 
+                        <td scope="row" >9.05E+0</td>
+                        <td scope="row" >9.42E+0</td>
+                        <td scope="row" >8.675E+2</td> 
+                        <td scope="row" >1.2538145E+5</td>
+   
+                    </tr>                
+                </tbody>  -->     
+            </table>
+        </lightning-tab> 
+        <lightning-tab label="Amortizações/Liquidações">
+            <table class="fixed_header slds-no-row-hover slds-table slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Data do Evento</th>
+                        <th scope="col">Valor Total</th>
+                        <th scope="col">Valor a Receber</th>    
+                    </tr>     
+                </thead>
+            <template for:each={listCobrancas} for:item="item" for:index="index">            
+                <tbody key={item.id}>
+                    <tr>
+                        <td scope="row">{item.tipo_movim}</td>
+                        <td scope="row">{item.dat_evento}</td>  
+                        <td scope="row">{item.val_total_movim}</td>  
+                        <td scope="row">{item.val_saldo_recebe}</td> 
+                    </tr>                
+                </tbody>
+            </template> 
+           <!--  <tbody>
+                <tr class="slds-hint-parent">
+                    <td scope="row" >CO AMTZ RECPRO</td>
+                    <td scope="row" >20/07/2022</td>  
+                    <td scope="row" >30000.00</td>
+                    <td scope="row" >0</td>
+                </tr>                
+            </tbody>    -->   
+        </table>
+        </lightning-tab>
+    </lightning-tabset>
+</template>

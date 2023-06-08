@@ -1,0 +1,30 @@
+.myTable{
+    font-size: 14px;
+    padding: 0;
+    width: 9em;
+    text-align: center;
+    background-color: #54698d;
+    color: white;
+    /*border-color: blue;
+    border: 1px solid; */
+}
+
+.modalpai .slds-modal__header{
+    /*background: cadetblue;*/
+    color: white;
+    background: repeating-linear-gradient(45deg, rgb(84, 105, 141), rgb(84, 105, 141) 20px, rgba(84, 105, 141, .97) 20px, rgba(84, 105, 141, .97) 40px);
+}
+
+
+
+.slds-button {
+    background: none;
+    background-color: var(--slds-c-button-color-background, var(--sds-c-button-color-background, transparent));
+    border-color: var(--slds-c-button-color-border, var(--sds-c-button-color-border, transparent));
+    color: #54698d;
+
+}
+
+td{
+    text-align: center;
+}

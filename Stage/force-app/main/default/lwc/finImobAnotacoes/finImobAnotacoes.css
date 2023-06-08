@@ -1,0 +1,11 @@
+.slds-modal__container{
+    width: 40% !important;
+    height: 70% !important;
+    max-width: 40% !important;
+    align-content: center;
+}
+.slds-modal__header{
+    /*background: cadetblue;*/
+    color: white;
+    background: repeating-linear-gradient(45deg, rgb(84, 105, 141), rgb(84, 105, 141) 20px, rgba(84, 105, 141, .97) 20px, rgba(84, 105, 141, .97) 40px);
+}

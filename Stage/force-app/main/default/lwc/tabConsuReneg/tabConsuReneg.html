@@ -1,0 +1,98 @@
+<template>
+    <template if:true={loading}>
+        <div style="position: relative;" class="slds-align_absolute-center spinner">
+            <lightning-spinner alternative-text="Carregando" variant="brand"></lightning-spinner>
+        </div>
+    </template>
+    
+    <template if:false={loading}>
+            <p class="slds-border_bottom" style="font-size:16px;color: #445e8a;padding-top: 45px;"><b>Consulta ES Renegociação</b></p>
+            <br></br>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped" id="myTable">
+                <thead class="slds-m-top_small">
+                    <tr>
+                        <th scope="col">Núm. Renegociação</th>
+                        <th scope="col">Núm. Empréstimo</th>
+                        <th scope="col">Modalidade</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Dt. Reneg.</th>
+                        <th scope="col">Cancelável?</th>
+                    </tr>
+                </thead>
+               <template for:each={renegList} for:item="reneg" for:index="index">
+                <tbody key={reneg.id}>
+                    <tr>
+                        <td scope="row"><lightning-button-icon class="slds-m-right_small" access-key={index} onclick={handleChange} icon-name="action:preview" variant="bare"></lightning-button-icon>{reneg.idPropost}</td>      
+                        <td scope="row">{reneg.numEmprestimo}</td>
+                        <td scope="row">{reneg.modalidade}</td>
+                        <td scope="row">{reneg.status}</td>
+                        <td scope="row">{reneg.dataRenegociacao}</td>
+                        <td scope="row">{reneg.cancelable}</td>
+                    </tr>
+                    
+                    <template if:true={reneg.areDetailsVisible}>
+                        <tr>
+                            <td colspan="15">                                    
+                                <div style="padding-bottom: 0%;">
+                                    <table class="slds-m-top_small slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-box " style="border: double;">
+                                        <thead >
+                                            <tr>
+                                                <th scope="col" style="background-color: #54698d;">Protocolo Cadastramento</th>
+                                                <th scope="col" style="background-color: #54698d;">Protocolo Cancelamento</th>
+                                                <th scope="col" style="background-color: #54698d;">Saldo Devedor</th>
+                                                <th scope="col" style="background-color: #54698d;">Dt. Implant.</th>
+                                            </tr>
+                                        </thead> 
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">{reneg.protocoloCadas}</td>
+                                                <td scope="row">{reneg.protocoloCancel}</td>
+                                                <td scope="row">{reneg.saldoDevedor}</td>
+                                                <td scope="row">{reneg.dataImplantacao}</td>                           
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                      <table class="slds-m-top_small slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-box" style="border: double;" id="myTable1">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" style="background-color: #54698d;">Prest. Anterior Renegociação</th>
+                                                <th scope="col" style="background-color: #54698d;">Antes da reneg. - Qtd. Prest. Restantes</th>
+                                                <th scope="col" style="background-color: #54698d;">Antes da reneg. - Qtd. Prest. Pagas</th>
+                                                <th scope="col" style="background-color: #54698d;">Antes da reneg. - Qtd. Prest. Cobradas</th>
+                                            </tr>
+                                        </thead>
+                                         <tbody>
+                                            <tr>
+                                                <td scope="row">{reneg.prestacaoAnt}</td>
+                                                <td scope="row">{reneg.qtdPrestRestante}</td>
+                                                <td scope="row">{reneg.qtdPrestPagas}</td>
+                                                <td scope="row">{reneg.qtdPrestCobradas}</td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                         <table class="slds-m-top_small slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-box" style="border: double;" id="myTable2">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" style="background-color: #54698d;">Prest. Posterior Renegociação</th>
+                                                <th scope="col" style="background-color: #54698d;">Após Renegociação - Qtd. Prest. Restantes</th>
+                                                <th scope="col" style="background-color: #54698d;"></th>
+                                                <th scope="col" style="background-color: #54698d;"></th>
+                                            </tr>
+                                        </thead>
+                                         <tbody>
+                                            <tr>
+                                                <td scope="row">{reneg.valorPrestacao}</td>
+                                                <td scope="row">{reneg.prestacoesRestantes}</td>
+                                            </tr>
+                                        </tbody>
+                                         </table>
+                                </div>                               
+                            </td>                           
+                        </tr>
+                    </template>
+                </tbody>
+            </template>
+        </table>
+     
+  </template>
+</template>

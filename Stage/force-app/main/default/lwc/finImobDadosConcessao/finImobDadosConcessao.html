@@ -1,0 +1,42 @@
+<template>
+    <div class="slds-grid slds-wrap " style="height: 100%">
+        <div class="slds-col slds-size_7-of-12 slds-p-top--medium slds-p-right--medium" style="height:calc(100% - 100px);">
+    
+            <div class="slds-col slds-size_1-of_1 " style="height:calc(100% - 150px);">
+                <lightning-card title="Crédito ao Vendedor:" class="slds-grid_vertical-stretch">
+                    <template for:each={vendedores} for:item="item" for:index="index">            
+                        <div key={item.id}>
+                            Data de Crédito: {item.dat_cred_vend}<br>
+                            Valor de Crédito: {item.val_cred_vend}<br>
+                            Quantidade de Vendedores: {item.qtd_vend}
+                        </div>
+                    </template> 
+                </lightning-card>
+            </div>
+            <div class="slds-col slds-size_1-of_1 slds-p-top--medium" style="height: 150px;">
+                <lightning-card title="Sinal:" class="slds-grid_vertical-stretch">                    
+                    <template for:each={sinal} for:item="item" for:index="index">            
+                        <div key={item.id}>
+                            Data de Crédito: {item.dat_cred_sinal}<br>
+                            Valor de Crédito: {item.val_cred_sinal}
+                        </div>
+                    </template>
+                </lightning-card>
+            </div>
+    
+    
+        </div>
+        <div class="slds-col slds-size_5-of-12 slds-p-top--medium" style="height:calc(100% - 100px);">
+            <div class="slds-col slds-size_1-of-1" style="height: 50%;">
+                <lightning-card title="FGTS" class="slds-grid_vertical-stretch">                    
+                    <template for:each={fgts} for:item="item" for:index="index">            
+                        <div key={item.id}>
+                            Data do recurso: {item.dat_fgts}<br>
+                            Valor do recurso: {item.val_fgts}
+                        </div>
+                    </template>
+                </lightning-card>
+            </div>
+        </div>
+    </div> 
+</template>

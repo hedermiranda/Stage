@@ -1,0 +1,32 @@
+<template>
+    <table class="fixed_header slds-table slds-no-row-hover slds-table_bordered slds-table_striped">    
+        <thead>
+            <tr>
+                <th scope="col">Contrato</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Status</th>
+                <th scope="col">Data</th>
+                <th scope="col">Valor previsto</th>
+            </tr> 
+        </thead><!--     
+        <template for:each={listTableAll} for:item="item" for:index="index">            
+            <tbody key={item.id}>
+                <tr>
+                    <td scope="row">'{item.modalidade}'</td>
+                    <td scope="row">{item.dataSaldoDevedor}</td>  
+                    <td scope="row">{item.valorSaldoDevedorAtual}</td> 
+                    <td scope="row">{item.dataPrevistaCredito}</td>   
+                </tr>                
+            </tbody>
+        </template> --> 
+        <tbody>
+            <tr class="slds-hint-parent">
+                <td scope="row"><lightning-button-icon class="slds-m-right_small" access-key={index} onclick={handleChange} icon-name="action:preview" variant="bare"></lightning-button-icon>704058</td>
+                <td scope="row" >DV PG A MAIOR</td>  
+                <td scope="row" >DEV</td> 
+                <td scope="row" >23/10/2017</td>  
+                <td scope="row" >4.22</td>   
+            </tr>                
+        </tbody>      
+    </table>
+</template>

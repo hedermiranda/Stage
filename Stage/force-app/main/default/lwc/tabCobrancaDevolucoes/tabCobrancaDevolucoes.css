@@ -1,0 +1,20 @@
+.slds-vertical-tabs {
+    border: none !important;
+}
+
+th[scope='col'] {
+    background-color: #54698d;
+    color: #fff;
+    height: 25px;
+}
+
+td[scope='row'] {
+    height: 25px;
+}
+
+.slds-spinner_container {
+    position: absolute;
+    top: 56%;
+    bottom: 16%;
+    left: 15%;
+}

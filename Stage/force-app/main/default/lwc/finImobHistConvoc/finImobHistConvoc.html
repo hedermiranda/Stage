@@ -1,0 +1,95 @@
+<template>
+    <lightning-tabset variant="scoped">
+        <lightning-tab label="Convocação">
+            <table class="fixed_header slds-no-row-hover slds-table slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Data da Convocação</th>
+                        <th scope="col">Empresa</th>
+                        <th scope="col">Data Limite de Apresentação da Proposta</th>
+                        <th scope="col">Data da Manifestação</th>
+                        <th scope="col">Valor Máximo da Prestação</th>
+                        <th scope="col">Prazo Máximo do Financiamento</th>
+                        <th scope="col">Valor Maximo do Financiamento</th>    
+                    </tr>
+                </thead>          
+                <tbody>
+                    <tr>
+                        <td scope="row">{carta.dataConvocacao}</td>
+                        <td scope="row">{carta.pessoa}</td>  
+                        <td scope="row">{carta.dataLimiteProposta}</td> 
+                        <td scope="row">{carta.dataManifestacao}</td>   
+                        <td scope="row">{carta.valorMaximoPrestacao}</td>   
+                        <td scope="row">{carta.quantidadePrestacoesMax}</td>   
+                        <td scope="row">{carta.valorMaximoFimanciamento}</td>   
+                    </tr>                
+                </tbody>
+                <!-- <tbody>
+                    <tr class="slds-hint-parent">
+                        <td scope="row" >31/05/2022</td>
+                        <td scope="row" >20/06/2022</td>
+                        <td scope="row" ></td> 
+                        <td scope="row" >ATUALIZAÇÃO SALDO DEVEDOR</td>
+                        <td scope="row" >5.40958E-1</td>
+                        <td scope="row" >6.7377E+2</td>
+                        <td scope="row" >1.7526E+2</td>   
+                    </tr>                
+                </tbody>  -->     
+            </table>
+        </lightning-tab> 
+        <lightning-tab label="Impedimentos">
+            <table class="fixed_header slds-no-row-hover slds-table slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Tipo de Impedimento</th>    
+                    </tr> 
+                </thead>    
+                <template for:each={histImpedimentos} for:item="item" for:index="index">            
+                    <tbody key={item.id}>
+                        <tr>
+                            <td scope="row">{item.dat_hist_val_impdto}</td>
+                            <td scope="row">{item.tipo_impedimento}</td>
+                        </tr>                
+                    </tbody>
+                </template>  
+                <!-- <tbody>
+                    <tr class="slds-hint-parent">
+                        <td scope="row" >CO AMTZ RECPRO</td>
+                        <td scope="row" >20/07/2022</td>
+                    </tr>                
+                </tbody>   -->   
+            </table>
+        </lightning-tab>
+        <lightning-tab label="Valores">
+            <table class="fixed_header slds-no-row-hover slds-table slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Prazo Máximo do Financiamento</th>
+                        <th scope="col">Valor Máximo da Prestação</th>
+                        <th scope="col">Valor Maximo do Financiamento</th>    
+                    </tr> 
+                </thead>    
+                <template for:each={hisValClass} for:item="item" for:index="index">            
+                    <tbody key={item.id}>
+                        <tr>
+                            <td scope="row">{item.data}</td>
+                            <td scope="row">{item.prazomaxfinanciamento}</td>  
+                            <td scope="row">{item.valormaximoprestacao}</td>  
+                            <td scope="row">{item.valormaximofinanciamento}</td>                             
+                        </tr>                
+                    </tbody>
+                </template>  
+                <!-- <tbody>
+                    <tr class="slds-hint-parent">
+                        <td scope="row" >31/05/2022</td>
+                        <td scope="row" >20/06/2022</td>
+                        <td scope="row" ></td> 
+                        <td scope="row" >ATUALIZAÇÃO SALDO DEVEDOR</td>   
+                    </tr>                
+                </tbody> -->     
+            </table>
+        </lightning-tab> 
+    </lightning-tabset>
+</template>

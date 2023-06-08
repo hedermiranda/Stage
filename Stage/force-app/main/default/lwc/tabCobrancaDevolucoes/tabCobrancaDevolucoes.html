@@ -1,0 +1,141 @@
+<template>
+
+<template if:true={loaded}>         
+    <lightning-spinner alternative-text="Loading" ></lightning-spinner>
+</template>
+
+<template if:false={loaded}>
+<div class="header-column slds-align_absolute-center" style="background: rgb(243 243 243);height:20%;align-items: center;border-radius: 10px;">
+<b><text class="slds-text-align_left" style="padding:21px;font-size:14px;color: #445e8a;">Num. Proposta e Modalidade:</text></b>
+    <div class="" style="width: 500px;padding-bottom: 10px;">
+                <lightning-combobox
+                variant="vertical"
+                name="numPropostaModalidade"
+                value={value}
+                placeholder="---Select---"
+                options={fieldsInfo}
+                onchange={carregandoListCobranca}>
+                </lightning-combobox>
+    </div>
+</br>
+</div>
+
+<br></br>
+
+<template if:true={isTableDados}>  
+
+
+
+<p class=" slds-border_bottom" style="font-size:16px;color: #445e8a;padding-inline-start: 14px;"><b>Cobrança</b></p>
+
+<br></br>
+
+<div style="height:450px;background-color:white">
+    <div class="slds-scrollable_y" style="height:90%;">
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-box" id="myTable">
+
+<thead>
+    <tr>           
+        <th scope="col">Tipo Movimento</th>
+        <th scope="col">Número prestação</th>
+        <th scope="col">Dt. Venc.</th>
+        <th scope="col">Dt. Compet.</th>
+        <th scope="col">Val. Prest.</th>
+        <th scope="col">Tipo Susp.</th>
+        <th scope="col">St.</th>
+    </tr>
+</thead>
+    <template for:each={treeItems} for:item="item" for:index="index">
+
+<tbody key={item.id}>
+    <tr>  
+        <td scope="row"><lightning-button-icon class="slds-m-right_small" onclick={handleChange} access-key={index} icon-name="action:preview" variant="bare" disabled={item.isDisabled}></lightning-button-icon>{item.tipoMovimento}</td>
+        <td scope="row">{item.numeroPrestacao}</td>
+        <td scope="row">{item.dataVencimento}</td>
+        <td scope="row">{item.dtCompet}</td>
+        <td scope="row">{item.valPrest}</td> 
+        <td scope="row">{item.tipoSusp}</td>  
+        <td scope="row">{item.st}</td>
+            
+    </tr>
+    <template if:true={item.areDetailsVisible}>
+    <tr>
+        <td colspan="12">
+            <div style="padding-bottom: 2%;">
+
+                <table class="slds-m-top_small slds-box slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped" style="border: double;">
+                <thead key={item.id}>
+                <tr>
+                <th scope="col" style="background-color: #54698d;">Cobr.</th>
+                    <th scope="col" style="background-color: #54698d;">Dt. Canc.</th>
+                    <th scope="col" style="background-color: #54698d;">Dt. Real Env.</th>
+                    <th scope="col" style="background-color: #54698d;">Dt. Retorno</th>
+                    <th scope="col" style="background-color: #54698d;">Descr. Ret.</th>
+                    <th scope="col" style="background-color: #54698d;">Pg</th>
+                    <th scope="col" style="background-color: #54698d;">Val. Cobr.</th>
+                </tr>
+                </thead>
+                        <template for:each={listRemessas} for:item="item" for:index="index">
+
+                <tbody key={item.id}>
+                <tr>          
+                    <td scope="row" >{item.cobr}</td>
+                    <td scope="row" >{item.dataCancel}</td>
+                    <td scope="row" >{item.dataRealEnv}</td>
+                    <td scope="row" >{item.dataRetorno}</td>
+                    <td scope="row" >{item.descRetorno}</td>
+                    <td scope="row" >{item.pago}</td>
+                    <td scope="row" >{item.valCobrado}</td>     
+                </tr>
+                    </tbody>
+                </template>
+                </table>
+                    
+            </div>
+        </td>
+    </tr>
+    </template>
+</tbody>
+</template>
+</table>
+    
+<br></br>
+
+<p class="slds-border_bottom" style="font-size:16px;color: #445e8a;padding-inline-start: 14px;"><b>Devolução</b></p>
+
+<br></br>
+
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-box" id="myTableDevo">
+
+<template for:each={devolucoes} for:item="item" for:index="index">
+<thead key={item.id}>
+                <tr>
+                    <th scope="col" style="background-color: #54698d;">Dt.Evento </th>
+                    <th scope="col" style="background-color: #54698d;">Valor Origem </th>
+                    <th scope="col" style="background-color: #54698d;">Dt. Real </th>
+                    <th scope="col" style="background-color: #54698d;">Valor Real </th>
+                    <th scope="col" style="background-color: #54698d;">Status </th>
+                    <th scope="col" style="background-color: #54698d;">Forma</th>
+                    <th scope="col" style="background-color: #54698d;"></th>
+                </tr>
+                </thead>
+                <tbody key={item.id}>
+                <tr> 
+                    <td scope="row">{item.dtEvento}</td>
+                    <td scope="row">{item.valorOrigem}</td>
+                    <td scope="row">{item.dtReal}</td>
+                    <td scope="row">{item.valorReal}</td>
+                    <td scope="row">{item.status}</td>
+                    <td scope="row">{item.forma}</td>
+                    <td scope="row"></td> 
+                </tr>
+                </tbody>
+</template>
+</table>
+    </div>
+</div>
+</template>
+
+
+</template>
+</template>

@@ -1,0 +1,236 @@
+<template>
+    <template if:true={loading}>
+        <lightning-spinner alternative-text="Carregando"></lightning-spinner>
+    </template>
+    <template if:false={loading}>
+        <template if:true={returnContract}>
+            <lightning-layout style="align-items: center;">
+                <lightning-layout-item>
+                    <lightning-formatted-text style="font-size:14px; color: #445e8a; font-weight: bold " value="Contrato(s): "></lightning-formatted-text>
+                </lightning-layout-item>
+                <lightning-layout-item padding="horizontal-small">
+                    <lightning-combobox
+                        name="contratos"
+                        value={idContrato}
+                        variant="label-hidden"
+                        placeholder="---Select---"
+                        options={options}
+                        onchange={handleChange}>
+                    </lightning-combobox> 
+                </lightning-layout-item>        
+            </lightning-layout>
+            <lightning-card>
+                <div class="slds-box " style="font-size:14px;padding:1%;border-color: #54698d;border-radius:5px;">
+                    <div>
+                        <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+                            <thead>
+                                <tr>
+                                    <th class="myTable" scope="col">
+                                        <div  title="Account Name">Contrato</div>
+                                    </th>
+                                    <th class="myTable" scope="col">   
+                                        <div  title="Account Industry">Tipo de carteira</div>
+                                    </th>
+                                    <th class="myTable" scope="col">
+                                        <div  title="Account Type">Situação do contrato</div>
+                                    </th>
+                                    <th class="myTable" scope="col">
+                                        <div  title="Account Number">Impedimento</div>
+                                    </th>
+                                    <th class="myTable" scope="col">
+                                        <div  title="Site">Condomínio</div>
+                                    </th>
+                                    <th class="myTable" scope="col">
+                                        <div class="slds-truncate slds-cell-wrap" title="Account Name">Escrit.</div>
+                                    </th>
+                                    <th class="myTable" scope="col">
+                                        <div class="slds-truncate slds-cell-wrap" title="Account Industry">Total de prestações</div>
+                                    </th>
+                                    <th class="myTable" scope="col">
+                                        <div class="slds-truncate slds-cell-wrap" title="Account Type">Prestações restantes</div>
+                                    </th>
+                                    <th class="myTable" scope="col">
+                                        <div class="slds-truncate slds-cell-wrap" title="Account Number">Valor das prestações</div>
+                                    </th>
+                                    <th class="myTable" scope="col">
+                                        <div class="slds-truncate slds-cell-wrap" title="Site">Prestações inadimplentes</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>                                       
+                                    <td>{dadosFin.idContrato}</td>
+                                    <td>{dadosFin.dscPlanoFincto}</td>
+                                    <td>{dadosFin.situacaoContrato}</td>
+                                    <td>{dadosContrato.Contrato_com_Impedimento}</td> <!--Retorno do contrato-->
+                                    <td>{dadosContrato.Contrato_em_Condominio}</td> <!--Retorno do contrato-->
+                                    <td>{dadosFin.escrit}</td>
+                                    <td>{dadosFin.intQntTotPrest}</td>
+                                    <td>{dadosFin.intQntPrestRest}</td>
+                                    <td>{dadosFin.valorPrestacao}</td>
+                                    <td>{dadosFin.prestacoesInadimplentes}</td>
+                                </tr>
+                            </tbody> 
+                        </table>
+                    </div>
+                    <div>
+                        <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Comprometimento de renda">Compromet. de renda</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >   
+                                        <div class="slds-truncate slds-cell-wrap" title="Data do último reajuste">Data do último reajuste</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Valor do Financiamento">Valor do Financiamento</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Saldo devedor">Saldo devedor</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Saldo para liquidação antecipada">Saldo para liquidação antecipada</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Taxa de juros">Taxa de juros</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Taxa mensal do fundo de liquidez">Taxa mensal do fundo de liquidez</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Taxa mensal do fundo de quitação por morte">Taxa mensal do fundo de quitação por morte</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Data de alteração (tqm)">Data de alteração (tqm)</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Taxa de administração">Taxa de administração</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>                                       
+                                    <td>{dadosFin.comprometimentoRenda}</td>
+                                    <td>{dadosFin.dataUltimoReajuste}</td>
+                                    <td>{dadosFin.valorFinanciamento}</td>
+                                    <td>{dadosFin.saldoDevedor}</td>
+                                    <td>{dadosFin.valorSaldoLiquidacao}</td>
+                                    <td>{dadosFin.taxaJuros}</td>
+                                    <td>{dadosFin.taxaMensalFundoLiquidez}</td>
+                                    <td>{dadosFin.taxaMensalFundoQuitacaoMorte}</td>
+                                    <td>{dadosFin.dataAlteracaoTqm}</td>
+                                    <td>{dadosFin.taxaAdministracao}</td>
+                                </tr>
+                            </tbody> 
+                        </table>
+                    </div>
+                    <div>
+                        <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Devedor Solidário">Devedor Solidário</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >   
+                                        <div class="slds-truncate slds-cell-wrap" title="Tipo do logradouro">Tipo do logradouro</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Logradouro">Logradouro</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Numero">Numero</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Complemento">Complemento</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Bairro">Bairro</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="CEP">CEP</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Cidade">Cidade</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col" >
+                                        <div class="slds-truncate slds-cell-wrap" title="Estado">Estado</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>                                       
+                                    <td class="slds-truncate slds-cell-wrap">{devedorSolidario}</td> <!--Retorno Devedores-Solidarios-->
+                                    <td>{dadosFin.tipoLogradouro}</td>
+                                    <td>{dadosFin.logradouro}</td>
+                                    <td>{dadosFin.numero}</td>
+                                    <td>{dadosFin.complemento}</td>
+                                    <td>{dadosFin.bairro}</td>
+                                    <td>{dadosFin.cep}</td>
+                                    <td>{dadosFin.cidade}</td>
+                                    <td>{dadosFin.siglaEstado}</td>
+                                </tr>
+                            </tbody> 
+                        </table>
+                    </div>
+                    <div>
+                        <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col">
+                                        <div class="slds-truncate slds-cell-wrap" title="Tipo de liquidação">Tipo de liquidação</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col">   
+                                        <div class="slds-truncate slds-cell-wrap" title="Data de liquidação">Data de liquidação</div>
+                                    </th>
+                                    <th style="text-align: center; background-color: #54698d; color: white;" scope="col">
+                                        <div class="slds-truncate slds-cell-wrap" title="Data de envio da baixa de hipoteca">Data de envio da baixa de hipoteca</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>                                       
+                                    <td>{liquidacoes.tipo_liqd}</td> <!--Retorno Liquidacoes-->
+                                    <td>{liquidacoes.data_liqd}</td> <!--Retorno Liquidacoes-->
+                                    <td>{liquidacoes.data_baixa}</td> <!--Retorno Liquidacoes-->
+                                </tr>
+                            </tbody> 
+                        </table>
+                    </div>
+                </div>
+            </lightning-card>
+            <lightning-card>
+                <div class="slds-text-align_right">
+                    <lightning-button label="Expandir Visualização" class="slds-m-right_small" size="medium" icon-name="action:view_relationship" onclick={openModal}></lightning-button>
+                </div>
+            </lightning-card>
+
+            <template if:true={isModalOpen}>
+                <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-fade-in-open slds-modal_large modalpai">
+                    <div class="slds-modal__container">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                            <lightning-icon icon-name="utility:close"
+                                alternative-text="close"
+                                variant="inverse">
+                            </lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <div class="slds-modal__header">
+                            <b><h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Financiamento Imobiliário</h1></b>
+                        </div>
+                        <div class="slds-modal__content" id="modal-content-id-1">
+                            <c-home-fin-imobi id-contrato={idContrato} matricula={matricula}></c-home-fin-imobi>
+                        </div>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+            </template>
+        </template>
+        <template if:false={returnContract}>
+            <div class="slds-align_absolute-center">
+                <br>
+                <p>{texto}</p>
+            </div>
+        </template>
+    </template>   
+</template>

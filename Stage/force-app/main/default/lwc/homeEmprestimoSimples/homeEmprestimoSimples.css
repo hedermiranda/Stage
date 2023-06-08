@@ -1,0 +1,39 @@
+.corBackGround {
+    background-color: #54698d;
+    color: white;
+    font-weight: bold;
+    font-size: 13.5px;
+}
+
+td[scope='row'] {
+    height: 25px;
+}
+
+.modalpai .slds-modal__header{
+    /*background: cadetblue;*/
+    color: white;
+    background: repeating-linear-gradient(45deg, rgb(84, 105, 141), rgb(84, 105, 141) 20px, rgba(84, 105, 141, .97) 20px, rgba(84, 105, 141, .97) 40px);
+}
+
+.table {
+    width: 100%;
+    display: inline-table;
+}
+
+.slds-button {
+    background: none;
+    background-color: var(--slds-c-button-color-background, var(--sds-c-button-color-background, transparent));
+    border-color: var(--slds-c-button-color-border, var(--sds-c-button-color-border, transparent));
+    color: #54698d;
+
+}
+.spinner {
+    height: 120px;
+}
+
+.myCssNoHover table>thead .slds-cell-fixed.slds-has-button-menu,
+.myCssNoHover table>thead .slds-cell-fixed.slds-has-button-menu:hover {
+    background-color: #54698d !important;
+    color: white;
+    pointer-events: none;
+}

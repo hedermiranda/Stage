@@ -1,0 +1,32 @@
+thead th[scope='col'] {
+font-weight: bold;
+font-size: 13px;
+background-color: #54698d;
+color: white;
+}
+
+td[scope='row'] {
+    font-size: 13px;
+    background-color: #f3f3f3;
+}
+
+.spinner {
+    height: 120px;
+}
+
+.myCss table>thead .slds-cell-fixed.slds-has-button-menu{
+    background-color: #54698d !important;
+    color: white;
+}
+
+.myCssCheckbox table>thead .slds-th__action.slds-th__action_form.slds-cell-fixed{
+    background-color: #54698d !important;
+    color: white;
+}
+
+.myCssNoHover table>thead .slds-cell-fixed.slds-has-button-menu,
+.myCssNoHover table>thead .slds-cell-fixed.slds-has-button-menu:hover {
+    background-color: #54698d !important;
+    color: white;
+    pointer-events: none;
+}

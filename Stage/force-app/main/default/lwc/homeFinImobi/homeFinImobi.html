@@ -1,0 +1,39 @@
+<template>
+    <lightning-modal-body>
+        <lightning-tabset variant="vertical">
+            <lightning-tab icon-name="standard:text_template" label="Impedimentos" data-id='impedimentos'>
+                <c-fin-imob-impedimentos id-contrato={idContrato} matricula={matricula}></c-fin-imob-impedimentos>
+            </lightning-tab>
+            <lightning-tab icon-name="standard:expense_report_entry" label="Anotações" data-id='anotacoes'>
+                <c-fin-imob-anotacoes id-contrato={idContrato} matricula={matricula}></c-fin-imob-anotacoes>
+            </lightning-tab>
+            <lightning-tab icon-name="standard:proposition" label="Condomínio" data-id='condominio'>
+                <c-fin-imob-condominios id-contrato={idContrato} matricula={matricula}></c-fin-imob-condominios>
+            </lightning-tab>
+            <lightning-tab icon-name="standard:contract_payment" label="Seguro e Taxa de Administração" data-id='seguroTaxAdm'> 
+                <c-fin-imob-seguro-tax id-contrato={idContrato} matricula={matricula}></c-fin-imob-seguro-tax>
+            </lightning-tab>
+            <lightning-tab icon-name="standard:discounts" label="Extrato e Amort. Líquida" data-id='extratoAmortLiq'>
+                <c-fin-imob-extrato-amort id-contrato={idContrato} matricula={matricula}></c-fin-imob-extrato-amort>        
+            </lightning-tab>
+            <lightning-tab icon-name="standard:partners" label="Prestações em Atraso" data-id='prestacoesAtraso'>
+                <c-fin-imob-prest-atraso id-contrato={idContrato} matricula={matricula}></c-fin-imob-prest-atraso>
+            </lightning-tab>
+            <lightning-tab icon-name="standard:client" label="Devoluções" data-id='devolucoes'>
+                <c-fin-imob-devolucoes id-contrato={idContrato} matricula={matricula}></c-fin-imob-devolucoes>
+            </lightning-tab>
+            <lightning-tab icon-name="standard:client" label="Simulação Amort. Líquida" data-id='simulacaoAmortLiq'>
+                
+            </lightning-tab>
+            <lightning-tab icon-name="standard:client" label="Dados da Concessão" data-id='dadosConcessao'>
+                <c-fin-imob-dados-concessao id-contrato={idContrato} matricula={matricula}></c-fin-imob-dados-concessao>
+            </lightning-tab>
+            <lightning-tab icon-name="standard:client" label="Simulador FI" data-id='simuladorFI'>
+                
+            </lightning-tab>
+            <lightning-tab icon-name="standard:client" label="Histórico de Convocação" data-id='historicoConvoc'>
+                <c-fin-imob-hist-convoc matricula={matricula}></c-fin-imob-hist-convoc>
+            </lightning-tab>
+        </lightning-tabset>
+    </lightning-modal-body>
+</template>

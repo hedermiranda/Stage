@@ -1,0 +1,30 @@
+<template>
+    <table class="fixed_header slds-no-row-hover slds-table slds-table_bordered slds-table_striped">
+        <thead>
+            <tr>
+                <th scope="col">Vencimento</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Valor a Receber</th>
+                <th scope="col">Valor Corrigido</th>
+            </tr>
+        </thead>
+        <template for:each={listPrestAtraso} for:item="item" for:index="index">            
+            <tbody key={item.id}>
+                <tr>
+                    <td scope="row">{item.dat_venc}</td>
+                    <td scope="row">{item.tipo_mov}</td>  
+                    <td scope="row">{item.val_saldo}</td> 
+                    <td scope="row">{item.val_corrigido}</td>   
+                </tr>                
+            </tbody>
+        </template> 
+        <!-- <tbody>
+            <tr class="slds-hint-parent">
+                <td scope="row">20/10/2017</td>
+                <td scope="row" class="slds-truncate slds-cell-wrap">COBRANÇA PRESTAÇÃO MENSAL</td>  
+                <td scope="row" >1.13999E+3</td> 
+                <td scope="row" >2.86087E+3</td>   
+            </tr>                
+        </tbody>   -->    
+    </table>
+</template>
